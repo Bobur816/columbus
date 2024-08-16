@@ -1,0 +1,145 @@
+.header {
+  &__top {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--color-border-gray);
+    &-wrapper {
+      //   background-color: red;
+      @include spaced;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__navigation {
+    position: fixed;
+    top: 2.6rem;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    transition: all 0.3s;
+    background-color: var(--color-white);
+    padding: 1.5rem 0;
+
+    .container {
+      // height: 100%;
+    }
+    &__wrapper {
+      height: 2.5rem;
+      // background-color: yellow;
+      // height: 100%;
+      // margin: 1.5rem 0;
+
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &__logo {
+      position: absolute;
+      height: 100%;
+      left: 0;
+
+      img {
+        height: 100%;
+      }
+    }
+    &__nav {
+      @include spaced;
+      gap: 2rem;
+
+      a {
+        height: 100%;
+        @include center;
+        gap: 0.5rem;
+
+        img {
+          height: 1.2rem;
+        }
+
+        &.active {
+          color: var(--color-primary);
+        }
+      }
+    }
+
+    &__controls {
+      height: 100%;
+      @include spaced;
+      gap: 0.75rem;
+
+      .btn {
+        height: 100%;
+      }
+    }
+
+    &__mobile {
+      display: none;
+    }
+  }
+
+  &.header-scrolled {
+    .header__navigation {
+      margin-top: 0;
+      top: 0;
+      width: 100%;
+      height: 4.5rem;
+      padding: 1rem 0;
+
+      box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 0;
+    &__top {
+      display: none;
+    }
+
+    &__navigation {
+      height: 4.5rem;
+      padding: 1rem 0;
+      box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.05);
+      top: 0;
+      &__logo {
+        @include absCenterX;
+      }
+      &__nav {
+        display: none;
+      }
+
+      &__controls {
+        display: none;
+      }
+
+      &__mobile {
+        @include spaced;
+        height: 100%;
+        width: 100%;
+
+        .btn {
+          height: 100%;
+        }
+
+        &_right {
+          @include spaced;
+          align-items: center;
+          height: 100%;
+          gap: 0.5rem;
+
+          i {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+  }
+}

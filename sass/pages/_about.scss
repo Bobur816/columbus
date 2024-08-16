@@ -1,0 +1,129 @@
+.travel {
+  margin-top: 2.5rem;
+  padding: 2.5rem 0;
+
+  &__info {
+    margin-top: 2.5rem;
+    @include spaced;
+    align-items: flex-start;
+    gap: 2rem;
+
+    & > p {
+      width: 50%;
+    }
+
+    &_left {
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.75rem; /* 145.833% */
+    }
+
+    &_right {
+      color: #899eb9;
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.3rem; /* 144.444% */
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 21.4rem;
+    margin-top: 3rem;
+    object-fit: cover;
+    border-radius: 1.25rem;
+  }
+}
+
+.command {
+  padding: 1rem 0 3rem 0;
+
+  &__wrapper {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  &__member {
+    height: fit-content;
+
+    &-head {
+      //   width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    &-img {
+      width: 8.1rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+    }
+
+    &-info {
+      @include center;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    &-name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 100%;
+    }
+
+    &-role {
+      font-size: 0.8rem;
+      font-weight: 400;
+      line-height: 180%; /* 28.8px */
+    }
+
+    &-text {
+      background-color: var(--color-white);
+      margin-top: 1.25rem;
+      padding: 1.25rem;
+      border-radius: 1.5rem;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      font-size: 0.7rem;
+      font-weight: 300;
+      line-height: 180%; /* 25.2px */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .travel {
+    margin-top: 0.5rem;
+    &__info {
+      flex-direction: column;
+      gap: 1.5rem;
+
+      & > p {
+        width: 100%;
+      }
+    }
+
+    &__img {
+      margin-top: 2rem;
+    }
+  }
+
+  .command {
+    padding: 1rem 0 1.5rem 0;
+    &__wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .command {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 0.75rem;
+  &_primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    &_nav {
+      height: 2.5rem;
+      padding: 0.7rem 2rem;
+      height: 100%;
+      font-size: 0.9rem;
+    }
+  }
+
+  &_secondary {
+    background-color: transparent;
+    border: 1px solid var(--color-border-gray);
+
+    &_nav {
+      aspect-ratio: 1/1;
+      font-size: 0.9rem;
+
+      img {
+        max-height: 70%;
+      }
+    }
+  }
+
+  &_yellow {
+    font-family: "Euclid Circular B";
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 100%;
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+  }
+
+  &_white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
+}

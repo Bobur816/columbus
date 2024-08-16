@@ -1,0 +1,183 @@
+.tour-selecter {
+  &__wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    padding: 2.5rem;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+  }
+
+  &__item {
+    background-color: rgba(0, 0, 0, 0.2);
+    @include spaced;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 0.75rem 1.75rem 3rem;
+    border-radius: 1rem 1rem 0 0;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    svg {
+      stroke: var(--color-white);
+    }
+    &.active {
+      background-color: var(--color-primary);
+    }
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  &__form {
+    padding: 0.5rem;
+    transform: translateY(-2.25rem);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1.5fr;
+    gap: 0.5rem;
+    background-color: var(--color-white);
+    border-radius: 1.25rem;
+
+    label {
+      background-color: transparent;
+      position: relative;
+      transition: all 0.3s;
+      @include spaced;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.75rem 1.75rem;
+      gap: 0.5rem;
+      border: 1px solid var(--color-border-gray);
+      border-radius: 0.75rem;
+      box-sizing: border-box;
+
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        font-family: "Euclid Circular B";
+        font-size: 0.85rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--color-black-2);
+        transition: all 0.3s;
+
+        &::placeholder {
+          color: inherit;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        @include absCenterY;
+        right: 1.4rem;
+        transition: all 0.3s;
+        height: 1.2rem;
+      }
+
+      &:focus-within {
+        border-color: var(--color-primary);
+
+        input {
+          color: var(--color-primary);
+        }
+
+        .icon svg {
+          fill: var(--color-primary);
+        }
+      }
+    }
+
+    button {
+      padding: 1.5rem 2.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-selecter {
+    width: 100%;
+
+    &__wrapper {
+      position: relative;
+      background-color: var(--color-white);
+      padding: 1rem 1rem;
+      border-radius: 1.25rem;
+    }
+
+    &__head {
+      gap: 0;
+      border-bottom: 1px solid var(--color-border-gray);
+      padding: 0;
+    }
+
+    &__item {
+      background-color: transparent;
+      color: var(--color-gray);
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0;
+
+      svg {
+        stroke: var(--color-gray);
+      }
+      &.active {
+        background-color: transparent;
+        border-bottom: 1px solid var(--color-primary);
+
+        svg {
+          stroke: var(--color-primary);
+        }
+
+        color: var(--color-primary);
+      }
+
+      &:hover {
+        transform: translateY(-0.1rem);
+      }
+    }
+
+    &__form {
+      padding: 1.5rem 0 0 0;
+      transform: translateY(0);
+      border-radius: 0;
+      grid-template-columns: 1fr;
+
+      label {
+        padding: 0.2rem 0;
+        border: none;
+
+        input {
+          border: 1px solid var(--color-border-gray);
+          border-radius: 0.9rem;
+          padding: 0.9rem 1.1rem;
+        }
+
+        .icon {
+          top: 60%;
+        }
+
+        &:focus-within {
+          input {
+            border-color: var(--color-primary);
+          }
+        }
+      }
+
+      button {
+        padding: 0.8rem 0;
+      }
+    }
+  }
+}

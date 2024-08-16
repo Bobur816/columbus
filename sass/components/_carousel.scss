@@ -1,0 +1,704 @@
+.swiper {
+  padding-bottom: 4rem;
+  .swiper-pagination {
+    width: fit-content;
+    @include absCenterX;
+  }
+}
+
+.carousel {
+  &__head {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+    .swiper-pagination {
+      bottom: 2rem;
+      width: fit-content;
+      @include absCenterX;
+      @media (max-width: 768px) {
+        bottom: 0.7rem;
+      }
+
+      &-bullet {
+        background-color: rgba(255, 255, 255, 0.7);
+        opacity: 1;
+      }
+      &-bullet-active {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  &__stories {
+    margin-top: 2rem;
+    padding-bottom: 0;
+
+    @media (max-width: 768px) {
+      overflow: visible;
+    }
+    .carousel__item {
+      background: linear-gradient(225deg, #d300c5, #fc0170, #ff6610, #ffc700);
+      border-radius: 50%;
+
+      aspect-ratio: 1/1;
+
+      &.visited {
+        background: #e0e0e0;
+      }
+
+      &.new {
+        &::after {
+          content: "new";
+          position: absolute;
+          background-color: #eb2839;
+          color: var(--color-white);
+          font-size: 0.6rem;
+          font-weight: 500;
+          @include absCenterX;
+          bottom: 1rem;
+          border-radius: 0.75rem;
+          padding: 0.1rem 0.35rem;
+        }
+      }
+
+      img {
+        border: 3px solid var(--color-white);
+        // position: absolute;
+        width: 95%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        @include absCenter;
+      }
+    }
+  }
+
+  &__hot-tours {
+    margin-top: 2.5rem;
+    // padding: 1rem 0;
+    // background-color: red;
+
+    .carousel__item {
+      min-height: 22.5rem;
+      height: fit-content;
+      background-color: var(--color-white);
+      border-radius: 1rem;
+      padding: 0.5rem;
+
+      &:hover {
+        .carousel__item__img {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__img {
+        width: 100%;
+        height: 10rem;
+        border-radius: 0.75rem;
+        overflow: hidden;
+
+        img {
+          @include fullImg;
+          transition: all 0.3s;
+        }
+      }
+
+      &__info {
+        height: fill;
+        padding: 0 0.5rem 0 0.5rem;
+        .title {
+          font-family: Stapel;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+
+        .stars {
+          margin: 0.5rem 0 0.75rem 0;
+        }
+
+        .price {
+          font-family: Stapel;
+          font-size: 0.7rem;
+          font-weight: 400;
+          line-height: 100%;
+          text-decoration: line-through;
+        }
+
+        .discount-price {
+          font-family: Stapel;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 100%;
+          color: var(--color-primary);
+          margin-top: 0.35rem;
+          padding-bottom: 0.25rem;
+          border-bottom: 1px solid var(--color-gray);
+        }
+        .gray-text {
+          color: var(--color-gray);
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          margin: 0.5rem 0;
+
+          span {
+            @include center;
+          }
+        }
+      }
+    }
+  }
+
+  &__hot-tours-2 {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: 14rem;
+      background-color: var(--color-white);
+      border-radius: 1.5rem;
+      display: grid;
+      grid-template-columns: 40% 60%;
+
+      &__info {
+        height: 100%;
+        padding: 2.25rem 2rem 2.25rem 2.25rem;
+        @include spaced;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h3 {
+          font-family: Stapel;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+
+        p {
+          margin: 1rem 0 1.5rem 0;
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.85rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+      }
+
+      &__img {
+        // background-color: green;
+        height: 100%;
+        // width: 60%;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        img {
+          @include fullImg;
+          transition: all 0.3s;
+        }
+      }
+
+      &:hover .carousel__item__img img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__popular {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: 20rem;
+      border-radius: 1.25rem;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      padding: 0.5rem;
+      position: relative;
+      overflow: hidden;
+
+      &__info {
+        background-color: var(--color-white);
+        border-radius: 0.75rem;
+        height: 100%;
+        width: 26.15rem;
+        padding: 1.5rem;
+        @include spaced;
+        flex-direction: column;
+        align-items: flex-start;
+        position: inherit;
+        z-index: 2;
+
+        &-top {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+
+        .info-logo {
+          height: 2.5rem;
+        }
+
+        .location {
+          color: var(--color-gray);
+          @include spaced;
+          gap: 0.3rem;
+          font-size: 0.8rem;
+          font-weight: 300;
+          line-height: 100%;
+
+          span {
+            @include center;
+          }
+        }
+
+        h3 {
+          font-family: Stapel;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.85rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+      }
+
+      &__img {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          @include fullImg;
+          transition: all 0.3s;
+        }
+      }
+
+      &:hover .carousel__item__img img {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &__popular-countries {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: fit-content;
+      background-color: var(--color-white);
+      border-radius: 1.25rem;
+      overflow: hidden;
+
+      &:hover {
+        .carousel__item__img {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      &__img {
+        width: 100%;
+        height: 7rem;
+        overflow: hidden;
+
+        img {
+          @include fullImg;
+          transition: all 0.3s;
+        }
+      }
+
+      &__info {
+        padding-top: 1rem;
+        .title {
+          font-family: Stapel;
+          font-size: 1.2rem;
+          font-weight: 400;
+          line-height: 100%;
+          padding: 0 0.75rem;
+        }
+
+        &-list {
+          margin: 0.35rem 0 0.2rem 0;
+
+          &__item {
+            padding: 0.75rem;
+            @include spaced;
+            transition: all 0.3s;
+
+            a {
+              font-size: 0.9rem;
+              font-weight: 400;
+              line-height: 100%;
+              color: var(--color-primary);
+            }
+
+            p {
+              font-size: 0.7rem;
+              font-weight: 400;
+              // line-height: 100%;
+
+              span {
+                font-size: 0.4rem;
+              }
+            }
+
+            &:not(:last-child) {
+              border-bottom: 1px solid var(--color-border-gray);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__domestic {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: 20rem;
+      background-color: var(--color-white);
+      border-radius: 1.25rem;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        .carousel__item__bg {
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      &__info {
+        @include fullImg;
+        position: relative;
+        z-index: 1;
+        padding: 1rem;
+
+        &-top {
+          position: absolute;
+          top: 1rem;
+          @include spaced;
+          gap: 0.5rem;
+
+          span {
+            padding: 0.25rem 1rem;
+            border-radius: 0.4rem;
+            color: var(--color-white);
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 100%;
+          }
+
+          .type {
+            background-color: #eb2839;
+          }
+
+          .discount {
+            background-color: #ff7a00;
+          }
+        }
+
+        &-content {
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-start;
+          color: var(--color-white);
+          gap: 0.5rem;
+
+          .tour {
+            &__name {
+              font-family: Stapel;
+              font-size: 0.8rem;
+              font-weight: 400;
+              line-height: 100%;
+            }
+
+            &__discount-price {
+              font-family: Stapel;
+              font-size: 1.1rem;
+              font-weight: 400;
+              line-height: 100%;
+            }
+
+            &__price {
+              font-size: 0.75rem;
+              font-weight: 500;
+              line-height: 100%;
+              padding: 0.3rem 1rem;
+              text-decoration: line-through;
+              background-color: #ffdd65;
+              border-radius: 0.25rem;
+              color: var(--color-black);
+            }
+
+            &__info {
+              text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              font-size: 0.7rem;
+              font-weight: 500;
+              line-height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__news {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: 20rem;
+      background-color: var(--color-white);
+      border-radius: 1rem;
+      position: relative;
+      display: grid;
+      grid-template-rows: 11.5rem 1fr;
+      overflow: hidden;
+
+      &:hover {
+        .carousel__item__img {
+          img {
+            transform: translate(-50%, -50%) scale(1.05);
+          }
+        }
+      }
+
+      &__img {
+        height: 11.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          @include fullImg;
+          @include absCenter;
+          transition: all 0.3s;
+        }
+      }
+
+      &__info {
+        padding: 0.75rem 0.5rem 1rem 0.5rem;
+        @include spaced;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h4 {
+          font-size: 0.9rem;
+          font-weight: 500;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+
+  // &__testimonials {
+  //   margin-top: 2.5rem;
+
+  //   .carousel__item {
+  //     height: 15rem;
+  //     background-color: var(--color-white);
+  //     border-radius: 1.25rem;
+  //     padding: 1.5rem 1rem 1.5rem 1.5rem;
+  //     position: relative;
+  //     overflow: hidden;
+  //     @include spaced;
+  //     flex-direction: column;
+  //     align-items: flex-start;
+
+  //     &__head {
+  //       &__top {
+  //         display: flex;
+  //         align-items: center;
+  //         gap: 1rem;
+  //         margin-bottom: 1rem;
+
+  //         h4 {
+  //           font-size: 1rem;
+  //           font-weight: 500;
+  //           line-height: 100%; /* 100% */
+  //         }
+
+  //         .stars {
+  //           i {
+  //             font-size: 0.8rem;
+  //           }
+  //         }
+  //       }
+  //     }
+
+  //     &__body {
+  //       font-size: 0.8rem;
+  //       font-weight: 300;
+  //       line-height: 1.3rem; /* 162.5% */
+  //     }
+  //   }
+  // }
+
+  &__item {
+    // background-color: yellow;
+    &__bg {
+      @include absCenter;
+      @include fullImg;
+      img {
+        @include fullImg;
+        transition: all 0.3s;
+        filter: brightness(0.8);
+      }
+    }
+  }
+
+  &__btns {
+    height: fit-content;
+    width: 100%;
+    // margin-top: 2.2rem;
+    display: flex;
+    justify-content: flex-end;
+    // @include center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &_head {
+      width: fit-content;
+      height: fit-content;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1;
+
+      .carousel__btn {
+        height: 3rem;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(15px);
+        border: none;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.8);
+
+          i {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    background-color: rgba(212, 0, 255, 0.596);
+    border-radius: 0.75rem;
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-primary);
+
+    i {
+      font-size: 0.8rem;
+      color: var(--color-white);
+    }
+
+    &:hover {
+      background-color: transparent;
+      i {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel__hot-tours-2 {
+    margin-top: 2.5rem;
+    padding-bottom: 4rem;
+
+    .carousel__item {
+      height: fit-content;
+      background-color: var(--color-white);
+      border-radius: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      &__info {
+        height: 100%;
+        padding: 1rem;
+        // @include spaced;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          font-family: Stapel;
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 100%;
+          text-align: center;
+        }
+
+        p {
+          margin: 1rem 3rem;
+          text-align: center;
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.85rem;
+          font-weight: 400;
+          line-height: 100%;
+        }
+      }
+
+      &__img {
+        // background-color: green;
+        height: 17rem;
+        // width: 60%;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        img {
+          @include fullImg;
+        }
+      }
+    }
+  }
+
+  .carousel__popular {
+    margin-top: 2.5rem;
+
+    .carousel__item {
+      height: fit-content;
+      border: 1px solid var(--color-border-gray);
+      grid-template-columns: 1fr;
+      padding: 0;
+
+      &__info {
+        height: 17.5rem;
+        width: 100%;
+
+        &-top {
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+
+      &__img {
+        border-radius: 1rem;
+        height: 15rem;
+        position: static;
+      }
+    }
+  }
+}
