@@ -46,7 +46,9 @@
           font-weight: 600;
           .icon {
             transform: translateY(-2.1rem);
-            stroke: var(--color-white);
+            svg {
+              stroke: var(--color-white);
+            }
           }
         }
       }
