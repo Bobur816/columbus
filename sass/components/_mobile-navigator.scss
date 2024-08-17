@@ -1,0 +1,115 @@
+.mobile-navigator {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 25;
+  display: flex;
+  align-items: flex-end;
+
+  &__wrapper {
+    width: 100%;
+
+    ul {
+      width: 90%;
+      margin: 0 auto;
+      @include spaced;
+      padding: 1rem 0;
+      position: relative;
+
+      li {
+        position: relative;
+        z-index: 2;
+        width: 20%;
+        font-size: 0.55rem;
+        font-weight: 400;
+        line-height: 100%;
+        transition: all 0.3s;
+
+        a {
+          @include center;
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        .icon {
+          transition: all 0.3s;
+          display: inline-block;
+          height: 1.6rem;
+          aspect-ratio: 1/1;
+          position: relative;
+          svg {
+            width: 100%;
+            @include absCenter;
+          }
+        }
+        &.active {
+          font-weight: 600;
+          .icon {
+            transform: translateY(-2.1rem);
+            stroke: var(--color-white);
+          }
+        }
+      }
+      .mobile-navigator-item {
+        // background-color: blue;
+      }
+
+      .indicator {
+        position: absolute;
+        aspect-ratio: 1/1;
+        // top: -50%;
+        width: 20%;
+        height: 100%;
+        transition: all 0.3s;
+
+        span {
+          @include absCenterX;
+          height: 100%;
+        }
+
+        &__dot {
+          position: absolute;
+          @include absCenterX;
+          aspect-ratio: 1/1;
+          top: -50%;
+          height: 4.3rem;
+          background-color: var(--color-white);
+          border-radius: 50%;
+          z-index: 5;
+          padding: 2px;
+          background-clip: border-box;
+          border: 2px solid transparent;
+
+          &-inside {
+            height: 100%;
+            width: 100%;
+            background-color: var(--color-primary);
+            border-radius: 50%;
+          }
+        }
+      }
+
+      li:nth-child(1).active ~ .indicator {
+        transform: translate(100% * 0);
+      }
+      li:nth-child(2).active ~ .indicator {
+        transform: translate(100% * 1);
+      }
+      li:nth-child(3).active ~ .indicator {
+        transform: translate(100% * 2);
+      }
+      li:nth-child(4).active ~ .indicator {
+        transform: translate(100% * 3);
+      }
+      li:nth-child(5).active ~ .indicator {
+        transform: translate(100% * 4);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-navigator {
+    visibility: hidden;
+  }
+}

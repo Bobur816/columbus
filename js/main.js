@@ -97,6 +97,22 @@ $(window).on("load", () => {
     $(indexwWillOpen).show();
   });
 
+  $(".mobile-navigator-item").on("click", function (e) {
+    $(".mobile-navigator-item").removeClass("active");
+
+    $(this).addClass("active");
+  });
+
+  // ______________________________mobile nav moving_________________________________
+
+  $(".mobile-navigator-item a").on("click", function (e) {
+    e.preventDefault();
+
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 500);
+  });
+
   // ______________________________successfull_________________________________
 
   $(".successful__close").on("click", function () {
@@ -111,7 +127,7 @@ $(window).on("load", () => {
     $(".successful-window").fadeIn(400);
   });
 
-  // ______________________________steps_________________________________
+  // ______________________________form - steps_________________________________
 
   function gotoStep(toEl, toStep) {
     $(".selection-tour__step").slideUp(300);
