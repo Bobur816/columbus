@@ -39,6 +39,24 @@ $(window).on("load", () => {
     $(".mobile-nav").slideUp(400);
   });
 
+  // ______________________________mobile filter_________________________________
+
+  $(".filter-mobile__open").on("click", function () {
+    $(".filter-mobile").slideDown(400);
+  });
+  $(".filter-mobile__close").on("click", function () {
+    $(".filter-mobile").slideUp(400);
+  });
+
+  // ______________________________mobile filter_________________________________
+
+  $(".map-mobile__open").on("click", function () {
+    $(".map-mobile").slideDown(400);
+  });
+  $(".map-mobile__close").on("click", function () {
+    $(".map-mobile").slideUp(400);
+  });
+
   // ______________________________dropdown_________________________________
 
   $(".dropdown__toggler").on("click", function (e) {
@@ -64,6 +82,19 @@ $(window).on("load", () => {
       $(".language__open").text(e.target.textContent);
     }
     $(this).slideToggle(400);
+  });
+
+  // _________________________________amenities______________________________
+
+  $(".amenities-head-item").on("click", function (e) {
+    let indexCicked = Array.from($(".amenities-head-item")).indexOf(e.target);
+    let indexwWillOpen = $(".amenities-body-item")[indexCicked];
+
+    $(".amenities-head-item").removeClass("active");
+    $(e.target).addClass("active");
+
+    $(".amenities-body-item").hide();
+    $(indexwWillOpen).show();
   });
 
   // ______________________________successfull_________________________________

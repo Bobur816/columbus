@@ -2,6 +2,28 @@
   margin-top: 2.5rem;
   padding: 2rem 0;
 
+  .mobile-field {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+    button {
+      margin-right: 1.5rem;
+      @include center;
+      gap: 0.4rem;
+      color: var(--color-gray);
+
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 100%;
+    }
+  }
+
   &__wrapper {
     margin-top: 2rem;
     display: grid;
@@ -64,7 +86,12 @@
         align-items: flex-start;
         gap: 0.5rem;
         li {
+          @include center;
+          gap: 0.5rem;
           color: var(--color-gray);
+          img {
+            height: 0.9rem;
+          }
         }
       }
 
@@ -75,6 +102,7 @@
         margin-top: 1.5rem;
 
         .btn {
+          @include center;
           padding: 0.75rem 2.1rem;
           border-radius: 5px;
           font-size: 0.85rem;
@@ -126,80 +154,30 @@
 
 @media (max-width: 768px) {
   .tours {
-    margin-top: 2.5rem;
-    padding: 2rem 0;
+    .mobile-field {
+      display: flex;
+    }
 
     &__wrapper {
-      margin-top: 2rem;
-      display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
     &__filter {
-      overflow-y: scroll;
       display: none;
     }
 
-    &__list {
-      @include center;
-      flex-direction: column;
-      width: 100%;
-      gap: 1.5rem;
-    }
-
     &__item {
-      // min-height: 15rem;
-      width: 100%;
-      height: fit-content;
-      background-color: var(--color-white);
-      border-radius: 1.25rem;
       padding: 0;
-      position: relative;
-
-      display: flex;
       flex-direction: column;
 
       &-img {
         width: 100%;
-        border-radius: 0.75rem;
         aspect-ratio: 2/1;
-        overflow: hidden;
-
-        img {
-          @include fullImg;
-        }
       }
 
       &-info {
-        //   background-color: blue;
-        flex-grow: 1;
-        padding: 1rem;
-        @include spaced;
-        flex-direction: column;
-        align-items: flex-start;
-
-        h3 {
-          font-family: Stapel;
-          font-size: 1.1rem;
-          font-weight: 400;
-          line-height: 100%;
-          margin: 0.5rem 0;
-        }
-
-        &__status {
-          @include center;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 0.5rem;
-          li {
-            color: var(--color-gray);
-          }
-        }
-
         &__bottom {
-          width: 100%;
-          @include spaced;
           align-items: flex-start;
           flex-direction: column;
           margin-top: 1.5rem;
@@ -207,51 +185,13 @@
 
           .btn {
             width: 100%;
-            padding: 0.75rem 2.1rem;
-            border-radius: 5px;
-            font-size: 0.85rem;
           }
         }
       }
 
-      &_price {
-        font-family: Stapel;
-        font-size: 0.7rem;
-        font-weight: 400;
-        line-height: 100%;
-        text-decoration: line-through;
-
-        &_discount {
-          color: var(--color-primary);
-          margin-top: 0.35rem;
-          font-family: Stapel;
-          font-size: 1.2rem;
-          font-weight: 400;
-          line-height: 100%;
-        }
-      }
-
       &-corner {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
         .corner-1 {
-          color: var(--color-gray);
-          font-size: 0.7rem;
-          font-weight: 300;
-          line-height: 100%;
           display: none;
-        }
-
-        .corner-2 {
-          color: var(--color-white);
-          font-size: 0.9rem;
-          font-weight: 500;
-          line-height: 100%;
-          background-color: var(--color-yellow);
-          padding: 0.3rem 0.65rem;
-          margin-left: 0.75rem;
-          border-radius: 5px;
         }
       }
     }

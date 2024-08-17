@@ -416,9 +416,6 @@
       </div>
     </div>
 
-   
-    
-
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -774,7 +771,7 @@
       </section>
 
 
-      <section class="tours gray-bg">
+      <section class="tour-single gray-bg">
         <div class="container">
           <div class="navigator">
             <ul class="navigator__list">
@@ -783,7 +780,7 @@
                 <i class="fa-solid fa-chevron-right"></i>
               </li>
               <li class="last">
-                <p>О нас</p>
+                <p>Таиланд</p>
               </li>
             </ul>
             <div class="navigator__right">
@@ -793,338 +790,340 @@
           </div>
           <h2 class="section__title">Robinson club khao lak</h2>
 
-          <div class="mobile-field">
-            <button class="filter-mobile__open">
-              <i class="fa-solid fa-sliders"></i>
-              Фильтр
-            </button>
-            <button class="map-mobile__open">
-              <i class="fa-solid fa-map-location-dot"></i>
-              Карта
-            </button>
-          </div>
-
-          <div class="tours__wrapper">
-            <div class="tours__filter">
-              <div class="filter">
-                <h4 class="filter__title">Фильтры</h4>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Регион</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="region" id="region"  type="radio">
-                      <label for="region">Турция</label>
-                    </li>
-                    <li>
-                      <input class="filter__search-input" type="text" placeholder="Найти отель">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                    </li>
-                  </ul>
+          
+          <div class="tour-single__wrapper">
+            <div class="tour-single__show">
+              <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-1.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-2.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-3.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-1.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-2.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-3.png" />
+                  </div>
                 </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Бюджет</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li class="filter-prices">
-                      <input class="filter__price-input" type="number" placeholder="1000000">
-                      <input class="filter__price-input" type="number" placeholder="1000000">
-                    </li>
-                  </ul>
+                <div class="swiper-button-next tour-single__show__btn carousel__btn">
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Категория отеля</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="category" id="star-5"  type="radio">
-                      <label for="star-5">
-                        <span>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <input name="category" id="star-4"  type="radio">
-                      <label for="star-4">
-                        <span>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-regular fa-star"></i>
-                        </span>
-                      </label>
-                    </li>
-                    <li>
-                      <input name="category" id="star-3"  type="radio">
-                      <label for="star-3">
-                        <span>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-regular fa-star"></i>
-                          <i class="fa-regular fa-star"></i>
-                        </span>
-                      </label>
-                    </li>
-                  </ul>
+                <div class="swiper-button-prev tour-single__show__btn carousel__btn">
+                  <i class="fa-solid fa-arrow-left"></i>
                 </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Формат питания</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="eat" id="no-eat"  type="radio">
-                      <label for="no-eat">Без питания</label>
-                    </li>
-                    <li>
-                      <input name="eat" id="breakfast"  type="radio">
-                      <label for="breakfast">Только завтрак</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Пляж</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="beach" id="beach"  type="radio">
-                      <label for="beach">Песчаный пляж</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Регионы</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="regions" id="region1"  type="radio">
-                      <label for="region1">Бангкок</label>
-                    </li>
-                    <li>
-                      <input name="regions" id="region2"  type="radio">
-                      <label for="region2">Паттайя</label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="filter-dropdown active">
-                  <button>
-                    <span>Водные развлечения</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                  </button>
-                  <ul class="filter-dropdown__body">
-                    <li>
-                      <input name="water" id="pool1"  type="radio">
-                      <label for="pool1">Бассейн с подогревом</label>
-                    </li>
-                    <li>
-                      <input name="water" id="pool2"  type="radio">
-                      <label for="pool2">Дайвинг</label>
-                    </li>
-                    <li>
-                      <input name="water" id="pool3"  type="radio">
-                      <label for="pool3">Крытый бассейн</label>
-                    </li>
-                  </ul>
-                </div>
-                <button class="btn btn_white">
-                  <i class="fa-solid fa-arrow-rotate-right"></i>
-                  Сбросить фильтры
-                </button>
-                <button class="btn btn_primary">Применить фильтры</button>
+                
               </div>
-            </div>
-            <div class="tours__list">
-              <div class="tours__item">
-                <div class="tours__item-corner">
-                  <span class="corner-1">500 отзывов</span>
-                  <span class="corner-2">5,5</span>
-                </div>
-                <div class="tours__item-img">
-                  <img src="img/pictures/tours-item-img-1.png" alt="tours-img">
-                </div>
-                <div class="tours__item-info">
-                  <div class="stars">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
+              <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-1.png" />
                   </div>
-
-                  <h3>Robinson club khao lak</h3>
-
-                  <ul class="tours__item-info__status">
-                    <li>
-                      <img src="img/icons/location.svg" alt="tour-item-icon">
-                      Таиланд, Као Лак (Khao Lak)
-                    </li>
-                    <li>
-                      <img src="img/icons/calendar.svg" alt="tour-item-icon">
-                      07 июля, за одного взрослого
-                    </li>
-                    <li>
-                      <img src="img/icons/services.svg" alt="tour-item-icon">
-                      Все включено
-                    </li>
-                  </ul>
-
-                  <div class="tours__item-info__bottom">
-                    <div class="tours__item-info__prices">
-                      <p class="tours__item_price"><span>3 750 000</span>Сум</p>
-                      <p class="tours__item_price_discount"><span>2 750 000</span>Сум</p>
-                    </div>
-                    <a href="tour-single.html" class="btn btn_primary">Посмотреть тур</a>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-2.png" />
                   </div>
-                </div>
-              </div>
-              <div class="tours__item">
-                <div class="tours__item-corner">
-                  <span class="corner-1">500 отзывов</span>
-                  <span class="corner-2">5,5</span>
-                </div>
-                <div class="tours__item-img">
-                  <img src="img/pictures/tours-item-img-1.png" alt="tours-img">
-                </div>
-                <div class="tours__item-info">
-                  <div class="stars">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-3.png" />
                   </div>
-
-                  <h3>Robinson club khao lak</h3>
-
-                  <ul class="tours__item-info__status">
-                    <li>
-                      <img src="img/icons/location.svg" alt="tour-item-icon">
-                      Таиланд, Као Лак (Khao Lak)
-                    </li>
-                    <li>
-                      <img src="img/icons/calendar.svg" alt="tour-item-icon">
-                      07 июля, за одного взрослого
-                    </li>
-                    <li>
-                      <img src="img/icons/services.svg" alt="tour-item-icon">
-                      Все включено
-                    </li>
-                  </ul>
-
-                  <div class="tours__item-info__bottom">
-                    <div class="tours__item-info__prices">
-                      <p class="tours__item_price"><span>3 750 000</span>Сум</p>
-                      <p class="tours__item_price_discount"><span>2 750 000</span>Сум</p>
-                    </div>
-                    <a href="tour-single.html" class="btn btn_primary">Посмотреть тур</a>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-1.png" />
                   </div>
-                </div>
-              </div>
-              <div class="tours__item">
-                <div class="tours__item-corner">
-                  <span class="corner-1">500 отзывов</span>
-                  <span class="corner-2">5,5</span>
-                </div>
-                <div class="tours__item-img">
-                  <img src="img/pictures/tours-item-img-1.png" alt="tours-img">
-                </div>
-                <div class="tours__item-info">
-                  <div class="stars">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-2.png" />
                   </div>
-
-                  <h3>Robinson club khao lak</h3>
-
-                  <ul class="tours__item-info__status">
-                    <li>
-                      <img src="img/icons/location.svg" alt="tour-item-icon">
-                      Таиланд, Као Лак (Khao Lak)
-                    </li>
-                    <li>
-                      <img src="img/icons/calendar.svg" alt="tour-item-icon">
-                      07 июля, за одного взрослого
-                    </li>
-                    <li>
-                      <img src="img/icons/services.svg" alt="tour-item-icon">
-                      Все включено
-                    </li>
-                  </ul>
-
-                  <div class="tours__item-info__bottom">
-                    <div class="tours__item-info__prices">
-                      <p class="tours__item_price"><span>3 750 000</span>Сум</p>
-                      <p class="tours__item_price_discount"><span>2 750 000</span>Сум</p>
-                    </div>
-                    <a href="tour-single.html" class="btn btn_primary">Посмотреть тур</a>
-                  </div>
-                </div>
-              </div>
-              <div class="tours__item">
-                <div class="tours__item-corner">
-                  <span class="corner-1">500 отзывов</span>
-                  <span class="corner-2">5,5</span>
-                </div>
-                <div class="tours__item-img">
-                  <img src="img/pictures/tours-item-img-1.png" alt="tours-img">
-                </div>
-                <div class="tours__item-info">
-                  <div class="stars">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
-
-                  <h3>Robinson club khao lak</h3>
-
-                  <ul class="tours__item-info__status">
-                    <li>
-                      <img src="img/icons/location.svg" alt="tour-item-icon">
-                      Таиланд, Као Лак (Khao Lak)
-                    </li>
-                    <li>
-                      <img src="img/icons/calendar.svg" alt="tour-item-icon">
-                      07 июля, за одного взрослого
-                    </li>
-                    <li>
-                      <img src="img/icons/services.svg" alt="tour-item-icon">
-                      Все включено
-                    </li>
-                  </ul>
-
-                  <div class="tours__item-info__bottom">
-                    <div class="tours__item-info__prices">
-                      <p class="tours__item_price"><span>3 750 000</span>Сум</p>
-                      <p class="tours__item_price_discount"><span>2 750 000</span>Сум</p>
-                    </div>
-                    <a href="tour-single.html" class="btn btn_primary">Посмотреть тур</a>
+                  <div class="swiper-slide">
+                    <img src="img/pictures/tour-img-3.png" />
                   </div>
                 </div>
               </div>
               
+              
+              
+            </div>
+            <div class="tour-single__info">
+              <h5>Тур с перелётом от </h5>
+              <p class="tour-single__info-price">2 750 000 сум </p>
+              <div class="stars">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+              </div>
+
+              <ul class="tour-single__info__status">
+                <li>
+                  <img src="img/icons/location-blue.svg" alt="tour-item-icon">
+                  Таиланд, Као Лак (Khao Lak)
+                </li>
+                <li>
+                  <img src="img/icons/calendar-blue.svg" alt="tour-item-icon">
+                  07 июля, за одного взрослого
+                </li>
+                <li>
+                  <img src="img/icons/services-blue.svg" alt="tour-item-icon">
+                  Все включено
+                </li>
+              </ul>
+
+              <p class="mini-info">В стоимость тура входит: отель, авиабилет, трансфер, страховка</p>
+              <div class="features">
+
+                <button class="btn btn_secondary-2">
+                  <img src="img/icons/ticket-blue.svg" alt="icon">
+                </button>
+                <button class="btn btn_secondary-2">
+                  <img src="img/icons/bus-blue.svg" alt="icon">
+                </button>
+                <button class="btn btn_secondary-2">
+                  <img src="img/icons/badroom-blue.svg" alt="icon">
+                </button>
+                <button class="btn btn_secondary-2">
+                  <img src="img/icons/health-blue.svg" alt="icon">
+                </button>
+              </div>
+
+              <h5>Услуги</h5>
+
+              <ul class="tour-single__info__services">
+                <li>
+                  <img src="img/icons/checkmark-blue.svg" alt="icon">
+                  Ресторан
+                </li>
+                <li>
+                  <img src="img/icons/checkmark-blue.svg" alt="icon">
+                  Территория
+                </li>
+                <li>
+                  <img src="img/icons/checkmark-blue.svg" alt="icon">
+                  Пляж
+                </li>
+                <li>
+                  <img src="img/icons/checkmark-blue.svg" alt="icon">
+                  SPA и лечение
+                </li>
+                <li>
+                  <img src="img/icons/checkmark-blue.svg" alt="icon">
+                  Питание
+                </li>
+              </ul>
+
+              <button class="btn btn_primary">Заказать билет</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour-map gray-bg">
+        <div class="container">
+          <h2 class="section__title">
+            Отель на карте
+          </h2>
+          <div class="tour-map__wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1334.9661023545534!2d69.28282927089569!3d41.31109229054715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2bec875291%3A0x22b5bc120c7e164!2sHotel%20Uzbekistan!5e0!3m2!1suz!2s!4v1723858422400!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="amenities gray-bg">
+        <div class="container">
+          <h2 class="section__title">Удобства отеля</h2>
+          <div class="amenities__wrapper">
+              <ul class="amenities__wrapper__head">
+                <li>
+                  <button class="amenities-head-item active">Общее</button>
+                </li>
+                <li>
+                  <button class="amenities-head-item">Услуги</button>
+                </li>
+                <li>
+                  <button class="amenities-head-item">Номера</button>
+                </li>
+                <li>
+                  <button class="amenities-head-item">Питание</button>
+                </li>
+              </ul>
+
+              <div class="amenities__wrapper__body">
+                <ul class="amenities-body-item active">
+                  <li>
+                    <p class="info__head">Информация об отеле</p>
+                    <div class="info__body">
+                      <p>
+                        Курортный отель через дорогу от пляжа Джомтьен. Предлагает размещение по оптимальной цене. Гостей ждут современные комфортабельные номера с видом на море, 3 ресторана, боулинг, бильярд, открытый бассейн, SPA-салон и тренажёрный зал.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="info__head">Где находится</p>
+                    <div class="info__body">
+                      <p>
+                        Отель расположен через дорогу от моря, в самом начале пляжа Джомтьен, в 5 км от центра Паттайи. Международный аэропорт Паттайи (Утапао) - в 37 км.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="amenities-body-item">
+                  <li>
+                    <p class="info__head">Услуги</p>
+                    <div class="info__body">
+                      <ul>
+                        <li>
+                          Прачечная (Платно)
+                        </li>
+                        <li>
+                          Услуги врача (Платно)
+                        </li>
+                        <li>
+                          Wi-Fi На всей территории (бесплатно)
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="info__head">Красота</p>
+                    <div class="info__body">
+                      <ul>
+                        <li>СПА-Центр (Платно)</li>
+                        <li>Сауна (Платно)</li>
+                        <li>Массаж (Платно)</li>
+                        <li>Центр красоты (Платно)</li>
+                        <li>Солярий (Платно)</li>
+                        <li>Хамам (Платно)</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="info__head">Развлечения</p>
+                    <div class="info__body">
+                      <ul>
+                        <li>Дискотека</li>
+                        <li>Анимация (Ночные развлекательные программы, Дневные развлекательные программы); языки: (Русский, Английский)</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="amenities-body-item">
+                  <li>
+                    <p class="info__head">Информация об отеле</p>
+                    <div class="info__body">
+                      <ul>
+                        <li>Курортный отель через дорогу от пляжа Джомтьен. Предлагает размещение по оптимальной цене. Гостей ждут современные комфортабельные номера с видом на море, 3 ресторана, боулинг, бильярд, открытый бассейн, SPA-салон и тренажёрный зал.</li>
+                        <li>Курортный отель через дорогу от пляжа Джомтьен. Предлагает размещение по оптимальной цене. Гостей ждут современные комфортабельные номера с видом на море, 3 ресторана, боулинг, бильярд, открытый бассейн, SPA-салон и тренажёрный зал.</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="amenities-body-item">
+                  <li>
+                    <p class="info__head">Ультра все включено</p>
+                    <div class="info__body">
+                      <ul>
+                        <li>Ультра все включено: 24 часа</li>
+                        <li>Питание :Завтрак, Поздний завтрак, Обед, Закуски, Послеобеденный чай, Ужин, Поздний ужин</li>
+                        <li>Бесплатно :Безалкогольные напитки, Напитки местного производства, Мороженое, Приветственный пакет для новобрачных, Кондитерская</li>
+                        <li>Платно :Напитки импортного производства, Приветственный пакет для именинников, Обслуживание номеров</li>
+                        <li>Платно :Напитки импортного производства, Приветственный пакет для именинников, Обслуживание номеров</li>
+                        <li>
+                          <ul>
+                            <li>Расписание :</li>
+                            <li>Завтрак :Рестораны MAIN RESTAURANT (Шведский стол, 07:00 - 10:00)</li>
+                            <li>Поздний завтрак :Рестораны MAIN RESTAURANT (Шведский стол, 10:00 - 11:00)</li>
+                            <li>Обед :Рестораны MAIN RESTAURANT (Шведский стол, 12:30 - 14:30)</li>
+                            <li>Закуски :Рестораны SNACK RESTAURANT (По меню, 12:00 - 16:00)</li>
+                            <li>Послеобеденный чай :Рестораны SNACK RESTAURANT (По меню, 15:00 - 18:00)</li>
+                            <li>Ужин :Рестораны MAIN RESTAURANT (Шведский стол, 19:00 - 21:00)</li>
+                            <li>Поздний ужин :Рестораны MAIN RESTAURANT (По меню, 23:30 - 00:30)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                 
+                </ul>
+              </div>
+            <div class="amenities__wrapper__body">
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials gray-bg">
+        <div class="container">
+          <h2 class="section__title">Говорят, с нами приятно иметь дело</h2>
+          <div class="testimonials__wrapper">
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Руслан</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.07.2024</p>
+              </div>
+              <p class="testimonials__item__body">
+                Отдыхали в конце июля 8 ночей в armas pemar beach 5 в Сиде.
+                Номера в отеле не новые, после косметического ремонта, но чистые
+                и уютные. Не первый раз в Турции отдыхаем, но такого количества
+                соотечеств...
+              </p>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Яна</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.05.2023</p>
+              </div>
+              <p class="testimonials__item__body">
+                Не первый раз бронируем тур/отель через сервис онлайнтурс! Все
+                четко, ясно, быстро! В процессе сбора путешествия решили
+                увеличить дни проживания в отеле, менеджер быстро решил эту
+                задачу, связался с ...
+              </p>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Дмитрий</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.07.2024</p>
+              </div>
+              <p class="testimonials__item__body">
+                Отдыхали в конце июля 8 ночей в armas pemar beach 5 в Сиде.
+                Номера в отеле не новые, после косметического ремонта, но чистые
+                и уютные. Не первый раз в Турции отдыхаем, но такого количества
+                соотечеств...
+              </p>
             </div>
           </div>
         </div>

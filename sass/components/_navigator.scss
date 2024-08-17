@@ -30,6 +30,9 @@
   }
 
   .btn {
+    display: inline-block;
+    @include center;
+
     &:first-child {
       width: 7rem;
       padding: 0.6rem 0;
