@@ -159,4 +159,9 @@ $(window).on("load", () => {
       }, 1000);
     }
   });
+
+  new WOW({
+    offset: 50,
+    mobile: false,
+  }).init();
 });

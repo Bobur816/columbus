@@ -249,6 +249,10 @@ body {
   }
 }
 
+.lazy {
+  opacity: 0;
+}
+
 .text_sm {
   font-size: 0.7rem;
   color: var(--color-gray);
@@ -448,7 +452,7 @@ body {
 }
 
 input[type=radio] {
-  width: 24px;
+  width: 1.2rem;
   aspect-ratio: 1/1;
   border-radius: 50%;
   background-color: var(--color-white);
@@ -1044,7 +1048,7 @@ input[type=radio]:checked::before {
 
 @media (max-width: 768px) {
   .carousel__hot-tours-2 {
-    margin-top: 2.5rem;
+    margin-top: 1.7rem;
     padding-bottom: 4rem;
   }
   .carousel__hot-tours-2 .carousel__item {
@@ -1887,20 +1891,6 @@ input[type=radio]:checked::before {
   align-items: center;
   justify-content: flex-start;
 }
-.filter-dropdown__body li.filter-prices {
-  display: flex;
-  gap: 0.5rem;
-}
-.filter-dropdown__body li.filter-prices input {
-  width: 50%;
-  border: none;
-  outline: none;
-  font-size: 0.9rem;
-  font-weight: 300;
-  line-height: 100%;
-  letter-spacing: -0.18px;
-  border-radius: 5px;
-}
 .filter-dropdown__body li label {
   width: 100%;
 }
@@ -2126,6 +2116,78 @@ input[type=radio]:checked::before {
     visibility: hidden;
   }
 }
+.filter-prices {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.filter-prices .price-input {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+.filter-prices .filter__price-input {
+  width: 50%;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 100%;
+  letter-spacing: -0.18px;
+  border-radius: 5px;
+  -moz-appearance: textfield;
+}
+.filter-prices .filter__price-input::-webkit-outer-spin-button, .filter-prices .filter__price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.filter-prices__slider {
+  margin-top: 1.5rem;
+  z-index: 3;
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 5px;
+  background-color: var(--color-border-gray);
+  position: relative;
+}
+.filter-prices__slider__progress {
+  height: 0.25rem;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  background-color: var(--color-primary);
+}
+.filter-prices .range-input {
+  height: 5px;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+.filter-prices .range-input input {
+  position: absolute;
+  width: 100%;
+  top: -0.25rem;
+  height: 0.25rem;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+.filter-prices .range-input input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  pointer-events: auto;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+.filter-prices .range-input input::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  pointer-events: auto;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
 .header__top {
   padding: 0.7rem 0;
   border-bottom: 1px solid var(--color-border-gray);
@@ -2909,6 +2971,12 @@ input[type=radio]:checked::before {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
+  .domestic {
+    padding: 2rem 0;
+  }
+  .attention {
+    padding: 2.2rem 0;
+  }
   .testimonials {
     padding: 2.5rem 0;
   }
@@ -3059,6 +3127,7 @@ input[type=radio]:checked::before {
 @media (max-width: 768px) {
   .travel {
     margin-top: 0.5rem;
+    padding-top: 0.5rem;
   }
   .travel__info {
     flex-direction: column;
@@ -3115,9 +3184,6 @@ input[type=radio]:checked::before {
   display: grid;
   grid-template-columns: 15.4rem 1fr;
   gap: 1.5rem;
-}
-.tours__filter {
-  overflow-y: scroll;
 }
 .tours__list {
   display: flex;
@@ -3236,6 +3302,9 @@ input[type=radio]:checked::before {
 }
 
 @media (max-width: 768px) {
+  .tours {
+    margin-top: 0;
+  }
   .tours .mobile-field {
     display: flex;
   }
@@ -3253,6 +3322,7 @@ input[type=radio]:checked::before {
   .tours__item-img {
     width: 100%;
     aspect-ratio: 2/1;
+    border-radius: 1.25rem;
   }
   .tours__item-info__bottom {
     align-items: flex-start;
@@ -3576,7 +3646,7 @@ input[type=radio]:checked::before {
     width: 100%;
   }
   .amenities {
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
   }
   .amenities__wrapper {
     width: 100%;

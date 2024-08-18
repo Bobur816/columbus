@@ -41,22 +41,6 @@
         align-items: center;
         justify-content: flex-start;
 
-        &.filter-prices {
-          display: flex;
-          gap: 0.5rem;
-
-          input {
-            width: 50%;
-            border: none;
-            outline: none;
-            font-size: 0.9rem;
-            font-weight: 300;
-            line-height: 100%;
-            letter-spacing: -0.18px;
-            border-radius: 5px;
-          }
-        }
-
         label {
           width: 100%;
         }

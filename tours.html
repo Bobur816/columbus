@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/animate.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -259,8 +260,20 @@
               </button>
               <ul class="filter-dropdown__body">
                 <li class="filter-prices">
-                  <input class="filter__price-input" type="number" placeholder="1000000">
-                  <input class="filter__price-input" type="number" placeholder="1000000">
+                  <div class="price-input price-input__mobile">
+                    <input class="filter__price-input input-min" type="number" max="15000000" value="3750000" >
+                    <input class="filter__price-input input-max"  type="number" max="15000000" value="11250000" >
+                  </div>
+
+                  <div class="filter-prices__slider">
+                    <div class="filter-prices__slider__progress filter-prices__slider__progress__mobile">
+                    </div>   
+                  </div>
+                  
+                  <div class="range-input range-input__mobile">
+                    <input type="range" class="range-min" min="0" max="15000000" value="3750000" step="50000">
+                    <input type="range" class="range-max" min="0" max="15000000" value="11250000" step="50000">
+                  </div>
                 </li>
               </ul>
             </div>
@@ -851,7 +864,7 @@
 
       <section class="tours gray-bg">
         <div class="container">
-          <div class="navigator">
+          <div class="navigator wow fadeInUp" data-wow-delay=".1s">
             <ul class="navigator__list">
               <li>
                 <a href="index.html">Главная</a>
@@ -866,9 +879,9 @@
               <a href="index.html" class="btn btn_primary"><i class="fa-solid fa-chevron-left"></i> </a>
             </div>
           </div>
-          <h2 class="section__title">Robinson club khao lak</h2>
+          <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Robinson club khao lak</h2>
 
-          <div class="mobile-field">
+          <div class="mobile-field wow fadeInUp" data-wow-delay=".1s">
             <button class="filter-mobile__open">
               <i class="fa-solid fa-sliders"></i>
               Фильтр
@@ -880,7 +893,7 @@
           </div>
 
           <div class="tours__wrapper">
-            <div class="tours__filter">
+            <div class="tours__filter wow fadeInUp" data-wow-delay=".2s">
               <div class="filter">
                 <h4 class="filter__title">Фильтры</h4>
                 <div class="filter-dropdown active">
@@ -906,8 +919,20 @@
                   </button>
                   <ul class="filter-dropdown__body">
                     <li class="filter-prices">
-                      <input class="filter__price-input" type="number" placeholder="1000000">
-                      <input class="filter__price-input" type="number" placeholder="1000000">
+                      <div class="price-input price-input__big">
+                        <input class="filter__price-input input-min" type="number" max="15000000" value="3750000" >
+                        <input class="filter__price-input input-max"  type="number" max="15000000" value="11250000" >
+                      </div>
+
+                      <div class="filter-prices__slider">
+                        <div class="filter-prices__slider__progress filter-prices__slider__progress__big">
+                        </div>   
+                      </div>
+                      
+                      <div class="range-input range-input__big">
+                        <input type="range" class="range-min" min="0" max="15000000" value="3750000" step="50000">
+                        <input type="range" class="range-max" min="0" max="15000000" value="11250000" step="50000">
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -1026,8 +1051,8 @@
                 <button class="btn btn_primary">Применить фильтры</button>
               </div>
             </div>
-            <div class="tours__list">
-              <div class="tours__item">
+            <div class="tours__list wow fadeInUp" data-wow-delay=".1s">
+              <div class="tours__item wow fadeInUp" data-wow-delay=".1s">
                 <div class="tours__item-corner">
                   <span class="corner-1">500 отзывов</span>
                   <span class="corner-2">5,5</span>
@@ -1070,7 +1095,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tours__item">
+              <div class="tours__item wow fadeInUp" data-wow-delay=".1s">
                 <div class="tours__item-corner">
                   <span class="corner-1">500 отзывов</span>
                   <span class="corner-2">5,5</span>
@@ -1113,7 +1138,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tours__item">
+              <div class="tours__item wow fadeInUp" data-wow-delay=".1s">
                 <div class="tours__item-corner">
                   <span class="corner-1">500 отзывов</span>
                   <span class="corner-2">5,5</span>
@@ -1156,7 +1181,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tours__item">
+              <div class="tours__item wow fadeInUp" data-wow-delay=".1s">
                 <div class="tours__item-corner">
                   <span class="corner-1">500 отзывов</span>
                   <span class="corner-2">5,5</span>
@@ -1208,13 +1233,13 @@
       <section class="more-ideas">
         <div class="container">
           <div class="more-ideas__wrapper">
-            <h2 class="section__title">Больше идей для путешествий</h2>
+            <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Больше идей для путешествий</h2>
             <div class="more-ideas__socials">
-              <a href="#" class="more-ideas__socials-item">
+              <a href="#" class="more-ideas__socials-item wow fadeInUp" data-wow-delay=".2s">
                 <img src="img/icons/telegram.svg" alt="social-icon" />
                 <span> Подписаться на нас в Telegram</span>
               </a>
-              <a href="#" class="more-ideas__socials-item">
+              <a href="#" class="more-ideas__socials-item wow fadeInUp" data-wow-delay=".3s">
                 <img src="img/icons/instagram.svg" alt="social-icon" />
                 <span>Подписаться на нас в Instagram</span>
               </a>
@@ -1225,7 +1250,7 @@
 
       <section class="contact">
         <div class="container">
-          <div class="contact__wrapper">
+          <div class="contact__wrapper wow fadeInUp" data-wow-delay=".1s">
             <h2 class="section__title">Хотите найти тур мечты?</h2>
             <p>Перезвоним через 1 минуту</p>
             <form class="call-form contact__form">
@@ -1506,10 +1531,10 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/carousels.js"></script>
-
+    <script src="js/price-control.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
