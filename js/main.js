@@ -13,6 +13,11 @@ $(window).on("load", () => {
       : $(".header").removeClass("header-scrolled");
   });
 
+  // ______________________________phone-format_________________________________
+  $(".phone-format").inputmask({
+    mask: "+998 (99) 999-99-99",
+  });
+
   // ______________________________tour-selecter_________________________________
 
   $(".tour-selecter__item").on("click", function (e) {
