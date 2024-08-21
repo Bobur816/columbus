@@ -2079,9 +2079,9 @@ input[type=radio]:checked::before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  aspect-ratio: 1/1;
   top: -50%;
   height: 4.3rem;
+  width: 4.3rem;
   background-color: var(--color-white);
   border-radius: 50%;
   z-index: 5;
