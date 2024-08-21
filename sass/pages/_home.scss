@@ -319,6 +319,10 @@
 
 .attention {
   padding: 3rem 0;
+
+  &_service {
+    padding: 0.1rem 0 3rem 0;
+  }
 }
 
 .testimonials {
@@ -561,6 +565,9 @@
 
   .attention {
     padding: 2.2rem 0;
+    &_service {
+      padding: 0.1rem 0 2rem 0;
+    }
   }
 
   .testimonials {

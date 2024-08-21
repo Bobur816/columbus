@@ -2850,6 +2850,9 @@ input[type=radio]:checked::before {
 .attention {
   padding: 3rem 0;
 }
+.attention_service {
+  padding: 0.1rem 0 3rem 0;
+}
 
 .testimonials {
   padding: 2.5rem 0;
@@ -3053,6 +3056,9 @@ input[type=radio]:checked::before {
   }
   .attention {
     padding: 2.2rem 0;
+  }
+  .attention_service {
+    padding: 0.1rem 0 2rem 0;
   }
   .testimonials {
     padding: 2.5rem 0;
