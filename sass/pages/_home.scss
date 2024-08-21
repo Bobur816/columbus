@@ -460,6 +460,11 @@
   }
 }
 
+.section-navigator {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
 @media (max-width: 768px) {
   .head {
     padding-top: 5.5rem;
@@ -581,6 +586,10 @@
       width: 100%;
       gap: 1rem;
     }
+  }
+  .section-navigator {
+    margin-top: 0;
+    padding-top: 1rem;
   }
 }
 

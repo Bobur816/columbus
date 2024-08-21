@@ -1,5 +1,4 @@
 .travel {
-  margin-top: 2.5rem;
   padding: 2.5rem 0;
 
   &__info {
@@ -95,8 +94,7 @@
 
 @media (max-width: 768px) {
   .travel {
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
+    padding-top: 0.5rems;
     &__info {
       flex-direction: column;
       gap: 1.5rem;

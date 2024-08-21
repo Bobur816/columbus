@@ -13,11 +13,6 @@ $(window).on("load", () => {
       : $(".header").removeClass("header-scrolled");
   });
 
-  // ______________________________phone-format_________________________________
-  $(".phone-format").inputmask({
-    mask: "+998 (99) 999-99-99",
-  });
-
   // ______________________________tour-selecter_________________________________
 
   $(".tour-selecter__item").on("click", function (e) {
@@ -132,6 +127,20 @@ $(window).on("load", () => {
     $(".successful-window").fadeIn(400);
   });
 
+  // ___________________faq_____________________
+
+  $(".faq-item").on("click", function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).find(".faq-item__answer").slideUp(400);
+    } else {
+      $(".faq-item").removeClass("active");
+      $(".faq-item__answer").slideUp(400);
+      $(this).addClass("active");
+      $(this).find(".faq-item__answer").slideDown(400);
+    }
+  });
+
   // ______________________________form - steps_________________________________
 
   function gotoStep(toEl, toStep) {
@@ -163,6 +172,11 @@ $(window).on("load", () => {
         $(".inputs input").val("");
       }, 1000);
     }
+  });
+
+  // ______________________________phone-format_________________________________
+  $(".phone-format").inputmask({
+    mask: "+998 (99) 999-99-99",
   });
 
   new WOW({

@@ -1,5 +1,4 @@
 .tours {
-  margin-top: 2.5rem;
   padding: 2rem 0;
 
   .mobile-field {
@@ -154,7 +153,6 @@
 
 @media (max-width: 768px) {
   .tours {
-    margin-top: 0;
     .mobile-field {
       display: flex;
     }

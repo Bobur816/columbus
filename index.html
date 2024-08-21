@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/animate.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -65,7 +65,7 @@
               <h2>Где вы хотите отдохнуть?</h2>
               <form class="selection-tour__step__form">
                 <div class="inputs inputs-1">
-                  <label for="">Выберите страну
+                  <label>Выберите страну
                     <input type="text" placeholder="Таиланд" required>
                   </label>
                 </div>
@@ -75,13 +75,16 @@
             <div class="selection-tour__step step-2">
               <h2>Где вы хотите отдохнуть?</h2>
               <form class="selection-tour__step__form">
-                <div class="inputs">
-                  <label for="">Выберите дату
-                    <input type="date" name="" id="" required>
+                <div class="inputs inputs-1">
+                  <label>Выберите дату
+                    <!-- <input type="date" name="" id="" required> -->
+                    <input type="text" name="daterange" required/>
                   </label>
-                  <label for="">Выберите дату
+                  <!-- <label for="">Выберите дату
                     <input type="date" name="" id="" required>
-                  </label>
+                  </label> -->
+
+                   
                 </div>
                 <button class="next-step finish-step btn btn_primary">Далее</button>
               </form>
@@ -93,7 +96,7 @@
                   <label for="">Ваше имя
                     <input type="text" placeholder="Ваше имя" required>
                   </label>
-                  <label for="">Номер телефона
+                  <label>Номер телефона
                     <input type="text" class="phone-format" placeholder="+998 (__) ___-__-__" required>
                   </label>
                 </div>
@@ -168,7 +171,7 @@
                 <a href="#">Блог</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="contacts.html">Контакты</a>
               </li>
             </ul>
 
@@ -302,7 +305,7 @@
                 <a class="header__top__link text_sm" href="about.html">О нас</a>
               </li>
               <li>
-                <a class="header__top__link text_sm" href="#">Помощь</a>
+                <a class="header__top__link text_sm" href="faq.html">FAQ</a>
               </li>
               <li>
                 <a class="header__top__link text_sm" href="#">Помощь</a>
@@ -354,7 +357,7 @@
                 <a href="#">Блог</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="contacts.html">Контакты</a>
               </li>
             </ul>
 
@@ -2102,7 +2105,7 @@
                   <a href="#">Блог</a>
                 </li>
                 <li>
-                  <a href="#">Контакты</a>
+                  <a href="contacts.html">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -2316,10 +2319,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js" integrity="sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="js/wow.min.js"></script>
     <script src="js/carousels.js"></script>
-
-
     <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="js/datepicker.js"></script>
+
   </body>
 </html>

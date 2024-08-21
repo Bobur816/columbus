@@ -1673,6 +1673,7 @@ input[type=radio]:checked::before {
   line-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .selection-tour__step__form input {
   height: 2.5rem;
@@ -1794,7 +1795,6 @@ input[type=radio]:checked::before {
   align-items: center;
   height: 3rem;
   padding: 0.5rem;
-  margin-bottom: 2rem;
   border-radius: 0.75rem;
   border: 1px solid #ebeff5;
 }
@@ -2186,6 +2186,78 @@ input[type=radio]:checked::before {
   pointer-events: auto;
   border-radius: 50%;
   background-color: var(--color-white);
+}
+
+.daterangepicker {
+  background-color: #f5f5f5;
+}
+.daterangepicker .calendar-table {
+  background-color: inherit;
+  border: none;
+}
+
+.daterangepicker td {
+  background-color: var(--color-white);
+  height: 1.5rem;
+  width: 1.8rem;
+}
+
+.daterangepicker td.off {
+  background-color: inherit;
+  color: var(--color-primary);
+}
+.daterangepicker td.off.in-range {
+  background-color: #d8e3ff;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background: var(--color-primary);
+}
+
+.daterangepicker td:hover {
+  background: var(--color-primary);
+}
+
+.daterangepicker .drp-buttons .btn {
+  height: auto;
+  display: inline-flex;
+  color: var(--color-primary);
+}
+
+.daterangepicker td.in-range.active {
+  background: var(--color-primary);
+}
+
+.daterangepicker td.in-range {
+  background-color: #d8e3ff;
+  color: var(--color-primary);
+}
+
+.daterangepicker td.start-date,
+.daterangepicker td.end-date {
+  color: var(--color-white);
+  border-radius: 3px;
+}
+
+.daterangepicker select {
+  border: none;
+  outline: none;
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer !important;
+}
+.daterangepicker select::-webkit-scrollbar {
+  width: 0;
+  height: 0.2rem;
+}
+.daterangepicker select::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.daterangepicker select::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
 }
 
 .header__top {
@@ -2903,6 +2975,11 @@ input[type=radio]:checked::before {
   padding: 0 2.3rem;
 }
 
+.section-navigator {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+}
+
 @media (max-width: 768px) {
   .head {
     padding-top: 5.5rem;
@@ -2998,6 +3075,10 @@ input[type=radio]:checked::before {
     width: 100%;
     gap: 1rem;
   }
+  .section-navigator {
+    margin-top: 0;
+    padding-top: 1rem;
+  }
 }
 @media (max-width: 600px) {
   .head .container {
@@ -3040,7 +3121,6 @@ input[type=radio]:checked::before {
   }
 }
 .travel {
-  margin-top: 2.5rem;
   padding: 2.5rem 0;
 }
 .travel__info {
@@ -3126,8 +3206,7 @@ input[type=radio]:checked::before {
 
 @media (max-width: 768px) {
   .travel {
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
+    padding-top: 0.5rems;
   }
   .travel__info {
     flex-direction: column;
@@ -3154,7 +3233,6 @@ input[type=radio]:checked::before {
   }
 }
 .tours {
-  margin-top: 2.5rem;
   padding: 2rem 0;
 }
 .tours .mobile-field {
@@ -3302,9 +3380,6 @@ input[type=radio]:checked::before {
 }
 
 @media (max-width: 768px) {
-  .tours {
-    margin-top: 0;
-  }
   .tours .mobile-field {
     display: flex;
   }
@@ -3338,7 +3413,6 @@ input[type=radio]:checked::before {
   }
 }
 .tour-single {
-  margin-top: 2.5rem;
   padding: 2rem 0 0 0;
 }
 .tour-single__wrapper {
@@ -3661,6 +3735,223 @@ input[type=radio]:checked::before {
   }
   .amenities__wrapper__body .amenities-body-item > li {
     grid-template-columns: 100%;
+  }
+}
+.contacts {
+  padding: 3rem 0;
+}
+.contacts__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.contacts__top-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.contacts__top-item:last-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.contacts__top-item h3 {
+  color: #b6c5d7;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 150%; /* 33px */
+}
+.contacts__top-item p {
+  color: #00132b;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+}
+.contacts__map {
+  margin-top: 2.5rem;
+  height: 24rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    margin-top: 0;
+  }
+  .contacts__top {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+  .contacts__top-item:nth-child(3), .contacts__top-item:nth-child(4) {
+    grid-column: 1/span 2;
+  }
+  .contacts__top-item:last-child {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .contacts__map {
+    height: 28rem;
+  }
+}
+.faq {
+  padding: 0 0 4rem 0;
+  overflow: hidden;
+}
+.faq__box {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .faq__box {
+    grid-template-columns: 1fr;
+  }
+  .faq__box .faq__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.05);
+  color: var(--color-primary-dark-2);
+  border-radius: 0.75rem;
+}
+.faq-item__question {
+  background-color: var(--color-white);
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s;
+  margin-bottom: 0;
+  border-radius: 0.75rem;
+}
+.faq-item__question i {
+  transition: all 0.4s;
+  color: var(--color-primary);
+}
+.faq-item__answer {
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+  transition: background-color 0.4s;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid var(--color-primary);
+  display: none;
+}
+.faq-item.active {
+  box-shadow: none;
+}
+.faq-item.active .faq-item__question {
+  margin-bottom: 1.35rem;
+}
+.faq-item.active .faq-item__question i {
+  transform: rotate(180deg);
+}
+.faq__right button {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.5rem;
+  height: 6.5rem;
+  border-radius: 1rem;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+}
+.faq__right button span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 0 0 1.5rem 0;
+    overflow: hidden;
+  }
+  .faq__box {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  .faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .faq-item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.05);
+    color: var(--color-primary-dark-2);
+    border-radius: 0.75rem;
+  }
+  .faq-item__question {
+    background-color: var(--color-white);
+    padding: 1.35rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.4s;
+    margin-bottom: 0;
+    border-radius: 0.75rem;
+  }
+  .faq-item__question i {
+    transition: all 0.4s;
+    color: var(--color-primary);
+  }
+  .faq-item__answer {
+    background-color: var(--color-white);
+    border-radius: 0.75rem;
+    transition: background-color 0.4s;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid var(--color-primary);
+    display: none;
+  }
+  .faq-item.active {
+    box-shadow: none;
+  }
+  .faq-item.active .faq-item__question {
+    margin-bottom: 1.35rem;
+  }
+  .faq-item.active .faq-item__question i {
+    transform: rotate(180deg);
+  }
+  .faq__right button {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1.5rem;
+    height: 6.5rem;
+    border-radius: 1rem;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .faq__right button span {
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
