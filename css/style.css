@@ -1545,6 +1545,9 @@ input[type=radio]:checked::before {
   width: 1.2rem;
   aspect-ratio: 1/1;
 }
+.mobile-nav__list a.active {
+  color: var(--color-primary);
+}
 
 @media (min-width: 769px) {
   .mobile-nav {
