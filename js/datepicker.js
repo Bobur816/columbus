@@ -2,6 +2,10 @@ $(function () {
   $('input[name="daterange"]').daterangepicker(
     {
       opens: "left",
+      locale: {
+        format: "DD.MM.YYYY", // Sanani DD.MM.YYYY formatida ko'rsatish
+      },
+      parentEl: ".datepicker-parrent",
     },
     function (start, end, label) {
       console.log(

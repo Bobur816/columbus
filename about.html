@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -74,13 +75,17 @@
             <div class="selection-tour__step step-2">
               <h2>Где вы хотите отдохнуть?</h2>
               <form class="selection-tour__step__form">
-                <div class="inputs">
-                  <label for="">Выберите дату
-                    <input type="date" name="" id="" required>
+                <div class="inputs inputs-1">
+                  <label class="datepicker-parrent">Выберите дату
+                    <!-- <input type="date" name="" id="" required> -->
+                    <input type="text" name="daterange" required/>
+                    <img src="img/icons/calendar-smile.svg" alt="calendar-icon">
                   </label>
-                  <label for="">Выберите дату
+                  <!-- <label for="">Выберите дату
                     <input type="date" name="" id="" required>
-                  </label>
+                  </label> -->
+
+                   
                 </div>
                 <button class="next-step finish-step btn btn_primary">Далее</button>
               </form>
@@ -1059,5 +1064,8 @@
     <script src="js/wow.min.js"></script>
     <script src="js/carousels.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/datepicker.js"></script>
   </body>
 </html>

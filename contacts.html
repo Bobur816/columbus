@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -73,13 +74,17 @@
             <div class="selection-tour__step step-2">
               <h2>Где вы хотите отдохнуть?</h2>
               <form class="selection-tour__step__form">
-                <div class="inputs">
-                  <label for="">Выберите дату
-                    <input type="date" name="" id="" required>
+                <div class="inputs inputs-1">
+                  <label class="datepicker-parrent">Выберите дату
+                    <!-- <input type="date" name="" id="" required> -->
+                    <input type="text" name="daterange" required/>
+                    <img src="img/icons/calendar-smile.svg" alt="calendar-icon">
                   </label>
-                  <label for="">Выберите дату
+                  <!-- <label for="">Выберите дату
                     <input type="date" name="" id="" required>
-                  </label>
+                  </label> -->
+
+                   
                 </div>
                 <button class="next-step finish-step btn btn_primary">Далее</button>
               </form>
@@ -443,8 +448,8 @@
               <span>Главная</span>
             </a>
           </li>
-          <li class="mobile-navigator-item active">
-            <a href="#">
+          <li class="mobile-navigator-item">
+            <a href="tours.html">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#C3C3C3">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9993 27L9.66602 28.3333V25.9333C9.66602 25.8 9.79935 25.5333 9.93268 25.4L12.3327 23.2666V16.8666L2.59935 21.1333C2.19935 21.4 1.66602 21.1333 1.66602 20.6V18.3333C1.66602 17.9333 1.93268 17.5333 2.19935 17.2666L12.3327 10.6V4.33329C12.3327 2.86663 13.5327 1.66663 14.9993 1.66663C16.466 1.66663 17.666 2.86663 17.666 4.33329V10.6L27.7994 17.2666C28.1994 17.5333 28.3327 17.9333 28.3327 18.3333V20.6C28.3327 21.1333 27.7993 21.4 27.3993 21.2666L17.666 17V23.4L20.066 25.5333C20.1993 25.6666 20.3327 25.8 20.3327 26.0666V28.3333L14.9993 27Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -482,7 +487,7 @@
               <span>FAQ</span>
             </a>
           </li>
-          <li class="mobile-navigator-item">
+          <li class="mobile-navigator-item active">
             <a href="#">
               <span class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C3C3C3">
@@ -1231,10 +1236,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js" integrity="sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="js/wow.min.js"></script>
     <script src="js/carousels.js"></script>
     <script src="js/price-control.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/datepicker.js"></script>
   </body>
 </html>
