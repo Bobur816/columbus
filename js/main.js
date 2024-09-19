@@ -21,6 +21,18 @@ $(window).on("load", () => {
     clicked.classList.add("active");
   });
 
+  $(".hot-tours__category-item").on("click", function (e) {
+    const clicked = e.target;
+    $(".hot-tours__category-item").removeClass("active");
+    clicked.classList.add("active");
+  });
+
+  $(".category-dropdown li").on("click", function (e) {
+    const clickedText = e.target.textContent;
+    $(".category-dropdown-btn span").text(clickedText);
+    const parent = e.target.closest(".dropdown__content");
+    $(parent).slideUp(400);
+  });
   // ______________________________selection_________________________________
 
   $(".selection__open").on("click", function () {

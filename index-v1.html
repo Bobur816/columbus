@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- successful   -->
+    <div class="successful-window">
+      <div class="successful__wrapper">
+        <button class="close__btn successful__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21" stroke="#0C73FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="successful__content">
+          <h3>Заявка</h3>
+          <img src="img/icons/successfull.svg" alt="successful">
+          <p>Ваш запрос получен. мы свяжемся с вами в ближайшее время</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- selection-tour   -->
+    <div class="selection-tour">
+      <div class="selection-tour__wrapper">
+        <div class="selection-tour__wrapper-bg">
+          <span class="yellow-circle">
+            <img src="img/icons/yellow-circle.png" alt="circle">
+            </svg>
+          </span>
+          <span class="blue-circle">
+            <img src="img/icons/blue-circle.png" alt="blue-icon">
+          </span>
+          <span class="plane">
+            <img src="img/icons/plane-withline.png" alt="plane" />
+          </span>
+        </div>
+
+        <div class="selection-tour__content">
+          <ul class="selection-tour__content__counter">
+            <li class="counter__item active">1</li>
+            <li class="counter__item">2</li>
+            <li class="counter__item">3</li>
+          </ul>
+
+          <div class="selection-tour__content__main">
+            <div class="selection-tour__step step-1">
+              <h2>Где вы хотите отдохнуть?</h2>
+              <form class="selection-tour__step__form">
+                <div class="inputs inputs-1">
+                  <label>Выберите страну
+                    <input type="text" placeholder="Таиланд" required>
+                  </label>
+                </div>
+                <button class="next-step btn btn_primary">Далее</button>
+              </form>
+            </div>
+            <div class="selection-tour__step step-2">
+              <h2>Где вы хотите отдохнуть?</h2>
+              <form class="selection-tour__step__form">
+                <div class="inputs inputs-1">
+                  <label class="datepicker-parrent">Выберите дату
+                    <!-- <input type="date" name="" id="" required> -->
+                    <input type="text" name="daterange" required/>
+                    <img src="img/icons/calendar-smile.svg" alt="calendar-icon">
+                  </label>
+                  <!-- <label for="">Выберите дату
+                    <input type="date" name="" id="" required>
+                  </label> -->
+
+                   
+                </div>
+                <button class="next-step finish-step btn btn_primary">Далее</button>
+              </form>
+            </div>
+            <div class="selection-tour__step step-3">
+              <h2>Где вы хотите отдохнуть?</h2>
+              <form class="selection-tour__step__form">
+                <div class="inputs">
+                  <label for="">Ваше имя
+                    <input type="text" placeholder="Ваше имя" required>
+                  </label>
+                  <label>Номер телефона
+                    <input type="text" class="phone-format" placeholder="+998 (__) ___-__-__" required>
+                  </label>
+                </div>
+                <button class="next-step btn btn_primary">Отправить</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <button class="close__btn selection__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21" stroke="#0C73FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile nav    -->
+    <div class="mobile-nav">
+      <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__wrapper-top">
+          <img class="mobile__logo" src="img/logos/logo.svg" alt="logo" />
+          <button class="mobile-nav__close btn btn_white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21"
+                stroke="#0C73FE"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-nav__main">
+          <div class="mobile-nav__wrapper-body">
+            <ul class="mobile-nav__list">
+              <li>
+                <a href="about.html" class="active">О нас</a>
+              </li>
+              <li>
+                <a href="education.html">Обучение</a>
+              </li>
+
+              <li>
+                <a href="tours.html">Туры</a>
+              </li>
+              <li>
+                <a href="tours.html">
+                  <img src="img/icons/fire.svg" alt="fire-icon" />
+                  Горячие туры
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/icons/persentage.svg" alt="persentage-icon" />
+                  Акции
+                </a>
+              </li>
+
+              <li>
+                <a href="service.html">Услуги</a>
+              </li>
+              <li>
+                <a href="#">Блог</a>
+              </li>
+              <li>
+                <a href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="language">
+              <button
+                class="language__open btn btn_secondary btn_secondary_nav"
+              >
+                Ру
+              </button>
+
+              <ul class="language__body">
+                <li class="lang-el">Uz</li>
+                <li class="lang-el">En</li>
+                <li class="lang-el">Ру</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mobile-nav__wrapper-bottom">
+            <ul class="social">
+              <li>
+                <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              </li>
+            </ul>
+            <div class="phones">
+              <button>
+                <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                +99899 944 44 88
+              </button>
+              <button>
+                <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                +99899 933 33 88
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile navigator   -->
+    <div class="mobile-navigator">
+      <div class="mobile-navigator__wrapper">
+        <ul>
+          <li class="mobile-navigator-item active">
+            <a href="#">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C3C3C3">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6667 17.3334H16.3333C18.3584 17.3334 20 18.975 20 21V28H12V21C12 18.975 13.6416 17.3334 15.6667 17.3334Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 24V14.613C4 12.7903 4.82852 11.0664 6.2518 9.92775L11.8353 5.4609C14.2701 3.51303 17.7299 3.51303 20.1647 5.4609L25.7482 9.92774C27.1715 11.0664 28 12.7902 28 14.6129V24C28 26.2091 26.2091 28 24 28H8C5.79086 28 4 26.2091 4 24Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Главная</span>
+            </a>
+          </li>
+          <li class="mobile-navigator-item">
+            <a href="tours.html">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#C3C3C3">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9993 27L9.66602 28.3333V25.9333C9.66602 25.8 9.79935 25.5333 9.93268 25.4L12.3327 23.2666V16.8666L2.59935 21.1333C2.19935 21.4 1.66602 21.1333 1.66602 20.6V18.3333C1.66602 17.9333 1.93268 17.5333 2.19935 17.2666L12.3327 10.6V4.33329C12.3327 2.86663 13.5327 1.66663 14.9993 1.66663C16.466 1.66663 17.666 2.86663 17.666 4.33329V10.6L27.7994 17.2666C28.1994 17.5333 28.3327 17.9333 28.3327 18.3333V20.6C28.3327 21.1333 27.7993 21.4 27.3993 21.2666L17.666 17V23.4L20.066 25.5333C20.1993 25.6666 20.3327 25.8 20.3327 26.0666V28.3333L14.9993 27Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>Туры</span>
+            </a>
+          </li>
+          <li class="mobile-navigator-item">
+            <a href="about.html">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C3C3C3">
+                  <path d="M27.7238 12.698C28.7771 13.7514 28.7771 15.4592 27.7238 16.5126C26.6704 17.566 24.9625 17.566 23.9092 16.5126C22.8558 15.4592 22.8558 13.7514 23.9092 12.698C24.9625 11.6446 26.6704 11.6446 27.7238 12.698" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.9378 7.88311C20.5598 9.50508 20.5598 12.1348 18.9378 13.7568C17.3159 15.3788 14.6861 15.3788 13.0641 13.7568C11.4422 12.1348 11.4422 9.50509 13.0641 7.88311C14.6861 6.26113 17.3159 6.26113 18.9378 7.88311" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.09291 12.698C9.14629 13.7514 9.14629 15.4592 8.09291 16.5126C7.03954 17.566 5.33169 17.566 4.27831 16.5126C3.22494 15.4592 3.22494 13.7514 4.27831 12.698C5.33169 11.6446 7.03954 11.6446 8.09291 12.698" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30.667 25.3332V23.8719C30.667 22.0306 29.175 20.5386 27.3336 20.5386H26.2656" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.33398 25.3332V23.8719C1.33398 22.0306 2.82598 20.5386 4.66732 20.5386H5.73532" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.1195 25.3333V23.1986C23.1195 20.6213 21.0302 18.532 18.4529 18.532H13.5475C10.9702 18.532 8.88086 20.6213 8.88086 23.1986V25.3333" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>О нас</span>
+            </a>
+          </li>
+          <li class="mobile-navigator-item">
+            <a href="faq.html">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C3C3C3">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.33398 8V18.6667C9.33398 20.8758 11.1248 22.6667 13.334 22.6667H24.0007C26.2098 22.6667 28.0006 20.8758 28.0006 18.6667V8C28.0006 5.79086 26.2098 4 24.0007 4H13.334C11.1248 4 9.33398 5.79086 9.33398 8Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.0676 11.4837C20.9891 10.2239 19.9087 9.2635 18.6484 9.33329C17.5223 9.28655 16.5223 10.0478 16.2676 11.1457" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.066 11.4838V11.4838C21.066 12.2413 20.6553 12.9392 19.9932 13.3071L18.666 14.0444" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.7667 17.2334C18.7666 17.2886 18.7218 17.3333 18.6666 17.3333C18.6114 17.3333 18.5667 17.2886 18.5667 17.2334C18.5666 17.1782 18.6113 17.1334 18.6665 17.1333C18.6931 17.1333 18.7186 17.1438 18.7374 17.1626C18.7562 17.1814 18.7667 17.2069 18.7667 17.2334" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22.6667 22.6667V24C22.6667 26.2092 20.8758 28 18.6667 28H8C5.79086 28 4 26.2092 4 24V13.3334C4 11.1242 5.79086 9.33337 8 9.33337H9.33333" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li class="mobile-navigator-item">
+            <a href="contacts.html">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#C3C3C3">
+                  <path d="M19.7787 12.268C18.8187 11.2826 17.4827 10.6666 15.9987 10.6666C14.5147 10.6666 13.1787 11.2826 12.2188 12.268" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M23.5758 8.47065C21.6372 6.53198 18.9585 5.33331 15.9998 5.33331C13.0412 5.33331 10.3625 6.53198 8.42383 8.47198" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24.578 28H26.666C28.1393 28 29.3327 26.8066 29.3327 25.3333V23.9813C29.3327 22.6093 28.6287 21.3333 27.4633 20.5373C24.5873 18.576 20.534 17.3333 15.9993 17.3333C11.4647 17.3333 7.41135 18.576 4.53535 20.5386C3.37002 21.3346 2.66602 22.6106 2.66602 23.9813V25.3333C2.66602 26.8066 3.85935 28 5.33268 28H7.42068C8.52468 28 9.42068 27.104 9.42068 26V24.1826C9.42068 23.7733 9.66202 23.3946 10.0433 23.2466C11.8113 22.5613 13.838 22.1666 15.9993 22.1666C18.1607 22.1666 20.1873 22.5613 21.9553 23.2466C22.3367 23.3946 22.578 23.7733 22.578 24.1826V26C22.578 27.104 23.474 28 24.578 28V28Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </span>
+              <span>Контакты</span>
+            </a>
+          </li>
+          <div class="indicator">
+            <span>
+              <img src="img/mobile-nav-icons/bottom-mover-2.svg" alt="bottom">
+            </span>
+            <div class="indicator__dot">
+              <div class="indicator__dot-inside"></div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HEADER  -->
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-wrapper">
+            <ul class="header__top__list">
+              <li>
+                <a class="header__top__link text_sm" href="about.html">О нас</a>
+              </li>
+              <li>
+                <a class="header__top__link text_sm" href="faq.html">FAQ</a>
+              </li>
+              <li>
+                <a class="header__top__link text_sm" href="education.html">Обучение</a>
+              </li>
+            </ul>
+
+            <div class="phones phones__header">
+              <button>
+                <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                +99899 944 44 88
+              </button>
+              <button>
+                <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                +99899 933 33 88
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__navigation">
+        <div class="container">
+          <div class="header__navigation__wrapper">
+            <a class="header__navigation__logo" href="index.html">
+              <img
+              src="img/logos/logo.svg"
+              alt="logo"
+            />
+            </a>
+            <ul class="header__navigation__nav">
+              <li>
+                <a href="tours.html">Туры</a>
+              </li>
+              <li>
+                <a href="tours.html">
+                  <img src="img/icons/fire.svg" alt="fire-icon" />
+                  Горячие туры
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/icons/persentage.svg" alt="persentage-icon" />
+                  Акции
+                </a>
+              </li>
+              <li>
+                <a href="service.html">Услуги</a>
+              </li>
+              <li>
+                <a href="#">Блог</a>
+              </li>
+              <li>
+                <a href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+
+            <div class="header__navigation__controls">
+              <div class="language">
+                <button
+                  class="language__open btn btn_secondary btn_secondary_nav"
+                >
+                  Ру
+                </button>
+
+                <ul class="language__body">
+                  <li class="lang-el">Uz</li>
+                  <li class="lang-el">En</li>
+                  <li class="lang-el">Ру</li>
+                </ul>
+              </div>
+              <button class="btn btn_secondary btn_secondary_nav">
+                <img src="img/icons/light-mode.svg" alt="light-mode-icon" />
+              </button>
+              <button class="selection__open btn btn_primary btn_primary_nav">
+                Подбор туров
+              </button>
+            </div>
+
+            <div class="header__navigation__mobile">
+              <div class="language">
+                <button
+                  class="language__open btn btn_secondary btn_secondary_nav"
+                >
+                  Ру
+                </button>
+
+                <ul class="language__body">
+                  <li class="lang-el">Uz</li>
+                  <li class="lang-el">En</li>
+                  <li class="lang-el">Ру</li>
+                </ul>
+              </div>
+              <div class="header__navigation__mobile_right">
+                <button
+                  class="mobile-nav__open btn btn_secondary btn_secondary_nav"
+                >
+                  <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <button class="btn btn_secondary btn_secondary_nav">
+                  <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN  -->
+    <main>
+      <section class="head">
+        <div class="container">
+          <div class="head__wrapper">
+            <div class="tour-selecter__wrapper">
+              <div class="tour-selecter">
+                <ul class="tour-selecter__head">
+                  <li class="tour-selecter__item active">
+                    <span class="icon">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="Group">
+                          <path
+                            id="Path"
+                            d="M10.1509 9.59138L8.02539 14.6056"
+                            stroke="inherit"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            id="Path_2"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12.9513 2.98572V2.98572C15.7814 4.18683 17.274 7.30764 16.4325 10.2647L16.3778 10.4579C16.2638 10.8595 15.9827 11.1927 15.6062 11.3728C15.2296 11.5529 14.7939 11.5626 14.4097 11.3994L5.88669 7.78102C5.50236 7.61795 5.2066 7.29764 5.07462 6.90156C4.94264 6.50548 4.98716 6.07179 5.19686 5.71078L5.29748 5.53651C6.84063 2.87803 10.1218 1.78451 12.9513 2.98572Z"
+                            stroke="inherit"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            id="Path_3"
+                            d="M12.951 2.98572L13.1398 3.7492C13.7008 6.02046 13.2082 8.4236 11.7988 10.291V10.291"
+                            stroke="inherit"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            id="Path_4"
+                            d="M12.9508 2.98572L12.2705 3.38022C10.247 4.55461 8.86051 6.57835 8.49609 8.88938V8.88938"
+                            stroke="inherit"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            id="Path_5"
+                            d="M2.5 16.6667C3.82838 15.3383 5.63006 14.592 7.50867 14.592C9.38729 14.592 11.189 15.3383 12.5173 16.6667"
+                            stroke="inherit"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                    Туры
+                  </li>
+                  <li class="tour-selecter__item">
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3341 2.49999H11.8262"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.17399 2.49999H6.66602"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5.0001 10.9976V7.0475C4.99184 6.29916 5.48964 5.6395 6.21154 5.44216C8.70285 4.85261 11.2974 4.85261 13.7887 5.44216C14.5106 5.6395 15.0084 6.29916 15.0001 7.0475V10.9977"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M5.5 18.125V18.125C6.48071 18.4028 7.51929 18.4028 8.5 18.125V18.125C9.48071 17.8472 10.5193 17.8472 11.5 18.125V18.125C12.4807 18.4028 13.5193 18.4028 14.5 18.125V18.125"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M16.6673 11.6739L10.9407 9.35013C10.3378 9.1055 9.6634 9.1055 9.06058 9.35013L3.33398 11.6739"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M3.33398 11.674L4.22032 15.2116"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M15.7812 15.2106L16.6674 11.674"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M2.5 15.4167V15.4167C3.48071 15.1389 4.51929 15.1389 5.5 15.4167V15.4167C6.48071 15.6944 7.51929 15.6944 8.5 15.4167V15.4167C9.48071 15.1389 10.5193 15.1389 11.5 15.4167V15.4167C12.4807 15.6944 13.5193 15.6944 14.5 15.4167V15.4167C15.4807 15.1389 16.5193 15.1389 17.5 15.4167V15.4167"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.7743 2.29789C11.6815 1.92692 11.3482 1.66667 10.9658 1.66667H9.03306C8.65067 1.66667 8.31735 1.92692 8.22461 2.29789"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M12.4958 5.18123L11.775 2.29788"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8.22457 2.29788L7.50329 5.18297"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    Круизы
+                  </li>
+                  <li class="tour-selecter__item">
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M9.99935 17.5L6.66602 18.3333V16.8333C6.66602 16.75 6.74935 16.5833 6.83268 16.5L8.33268 15.1667V11.1667L2.24935 13.8333C1.99935 14 1.66602 13.8333 1.66602 13.5V12.0833C1.66602 11.8333 1.83268 11.5833 1.99935 11.4167L8.33268 7.25001V3.33334C8.33268 2.41667 9.08268 1.66667 9.99935 1.66667C10.916 1.66667 11.666 2.41667 11.666 3.33334V7.25001L17.9994 11.4167C18.2494 11.5833 18.3327 11.8333 18.3327 12.0833V13.5C18.3327 13.8333 17.9993 14 17.7493 13.9167L11.666 11.25V15.25L13.166 16.5833C13.2493 16.6667 13.3327 16.75 13.3327 16.9167V18.3333L9.99935 17.5Z"
+                          stroke="inherit"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    Авиабилеты
+                  </li>
+                </ul>
+                <form class="tour-selecter__form">
+                  <label>
+                    <span class="text_sm">Откуда</span>
+                    <input type="text" placeholder="Ташкент" />
+                    <span class="icon">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="#899EB9"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="Frame">
+                          <path
+                            id="Vector"
+                            d="M2.49984 19H21.4998V21H2.49984V19ZM22.0698 9.64001C21.8598 8.84001 21.0298 8.36001 20.2298 8.58001L14.9198 10L8.01984 3.57001L6.08984 4.08001L10.2298 11.25L5.25984 12.58L3.28984 11.04L1.83984 11.43L4.42984 15.92C4.42984 15.92 11.5498 14.02 20.9998 11.49C21.8098 11.26 22.2798 10.44 22.0698 9.64001Z"
+                            fill="inherit"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+                  </label>
+                  <label>
+                    <span class="text_sm">Куда</span>
+                    <input type="text" placeholder="Турция" />
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="#899EB9"
+                      >
+                        <path
+                          d="M2.08398 15.8333H17.9173V17.5H2.08398V15.8333ZM16.1173 13.2083C16.784 13.3833 17.4673 12.9917 17.6507 12.325C17.8257 11.6583 17.434 10.975 16.7673 10.7917L12.3423 9.60834L10.0423 2.09167L8.43398 1.66667V8.56667L4.29232 7.45834L3.51732 5.52501L2.30898 5.2V9.50834L16.1173 13.2083Z"
+                          fill="inherit"
+                          fill-opacity="0.87"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+                  <label>
+                    <span class="text_sm">Длительность</span>
+                    <input type="text" placeholder="7 - 9 ночей" />
+                  </label>
+                  <label>
+                    <span class="text_sm">Кто едет</span>
+                    <input type="text" placeholder="2 взрослых" />
+                  </label>
+                  <button class="btn btn_primary">Найти</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="head__wrapper-back">
+              <div class="head__content">
+                <div class="head__content__common">
+                  <h1>ОАЭ - отдых круглый год вместе с Columbus!</h1>
+                  <p>2500 км песчаных пляжей и тысячи комфортных отелей</p>
+                  <div class="btns">
+                    <button class="btn btn_primary">Выбрать тур</button>
+                    <button class="btn btn_white">Подробнее</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper carousel__head">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img
+                      class="carousel__item__bg"
+                      src="img/pictures/head_carousel_img-1.png"
+                      alt="carousel__item_img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="carousel__item__bg"
+                      src="img/pictures/head_carousel_img-1.png"
+                      alt="carousel__item_img"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      class="carousel__item__bg"
+                      src="img/pictures/head_carousel_img-1.png"
+                      alt="carousel__item_img"
+                    />
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination head_pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="carousel__btns carousel__btns_head">
+                  <button class="carousel__btn carousel__head_prew">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button class="carousel__btn carousel__head_next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stories">
+        <div class="container wow fadeInUp" data-wow-delay=".2s">
+          <h2 class="section__title">Истории</h2>
+
+          <div class="swiper carousel__stories">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <a href="#" class="swiper-slide carousel__item visited">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item new">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item new">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <img src="img/pictures/story__item-1.png" alt="story-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hot-tours gray-bg">
+        <div class="container">
+          <div class="hot-tours__head wow fadeInUp" data-wow-delay=".2s">
+            <h2 class="section__title">Горячие туры</h2>
+            <div class="hot-tours__category">
+              <ul class="hot-tours__category-list">
+                <li>
+                  <button class="hot-tours__category-item active">
+                    Таиланд
+                  </button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">ОАЭ</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Египет</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Куба</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Турция</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Мальдивы</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+                <li>
+                  <button class="hot-tours__category-item">Россия</button>
+                </li>
+              </ul>
+
+              <div class="dropdown">
+                <button class="dropdown__toggler category-dropdown-btn">
+                  <span>
+                    По умолчанию
+                  </span>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown__content absolute">
+                  <ul class="category-dropdown">
+                    <li>lorem ipsum 1</li>
+                    <li>lorem ipsum 2</li>
+                    <li>lorem ipsum 3</li>
+                    <li>lorem ipsum 4</li>
+                    <li>lorem ipsum 5</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hot-tours__carousel-1 wow fadeInUp" data-wow-delay=".2s">
+            <div class="swiper carousel__hot-tours">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-img-1.png"
+                      alt="hot-tour-img"
+                    />
+                  </div>
+                  <div class="carousel__item__info">
+                    <p class="gray-text text_sm font_light">
+                      <span>
+                        <img src="img/icons/location.svg" alt="location-icon" />
+                      </span>
+                      Таиланд, Као Лак (Khao Lak)
+                    </p>
+                    <h3 class="title">Robinson club khao lak</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="price">3 750 000 Сум</p>
+                    <p class="discount-price">2 750 000 Сум</p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/calendar.svg" alt="calendar-icon" />
+                      07 июля, за одного взрослого
+                    </p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/services.svg" alt="services-icon" />
+                      Все включено
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-img-1.png"
+                      alt="hot-tour-img"
+                    />
+                  </div>
+                  <div class="carousel__item__info">
+                    <p class="gray-text text_sm font_light">
+                      <span>
+                        <img src="img/icons/location.svg" alt="location-icon" />
+                      </span>
+                      Таиланд, Као Лак (Khao Lak)
+                    </p>
+                    <h3 class="title">Robinson club khao lak</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="price">3 750 000 Сум</p>
+                    <p class="discount-price">2 750 000 Сум</p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/calendar.svg" alt="calendar-icon" />
+                      07 июля, за одного взрослого
+                    </p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/services.svg" alt="services-icon" />
+                      Все включено
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-img-1.png"
+                      alt="hot-tour-img"
+                    />
+                  </div>
+                  <div class="carousel__item__info">
+                    <p class="gray-text text_sm font_light">
+                      <span>
+                        <img src="img/icons/location.svg" alt="location-icon" />
+                      </span>
+                      Таиланд, Као Лак (Khao Lak)
+                    </p>
+                    <h3 class="title">Robinson club khao lak</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="price">3 750 000 Сум</p>
+                    <p class="discount-price">2 750 000 Сум</p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/calendar.svg" alt="calendar-icon" />
+                      07 июля, за одного взрослого
+                    </p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/services.svg" alt="services-icon" />
+                      Все включено
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-img-1.png"
+                      alt="hot-tour-img"
+                    />
+                  </div>
+                  <div class="carousel__item__info">
+                    <p class="gray-text text_sm font_light">
+                      <span>
+                        <img src="img/icons/location.svg" alt="location-icon" />
+                      </span>
+                      Таиланд, Као Лак (Khao Lak)
+                    </p>
+                    <h3 class="title">Robinson club khao lak</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="price">3 750 000 Сум</p>
+                    <p class="discount-price">2 750 000 Сум</p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/calendar.svg" alt="calendar-icon" />
+                      07 июля, за одного взрослого
+                    </p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/services.svg" alt="services-icon" />
+                      Все включено
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-img-1.png"
+                      alt="hot-tour-img"
+                    />
+                  </div>
+                  <div class="carousel__item__info">
+                    <p class="gray-text text_sm font_light">
+                      <span>
+                        <img src="img/icons/location.svg" alt="location-icon" />
+                      </span>
+                      Таиланд, Као Лак (Khao Lak)
+                    </p>
+                    <h3 class="title">Robinson club khao lak</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="price">3 750 000 Сум</p>
+                    <p class="discount-price">2 750 000 Сум</p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/calendar.svg" alt="calendar-icon" />
+                      07 июля, за одного взрослого
+                    </p>
+
+                    <p class="gray-text text_sm font_light">
+                      <img src="img/icons/services.svg" alt="services-icon" />
+                      Все включено
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination pagination_hot-tours"></div>
+              <div class="carousel__btns">
+                <button class="carousel__btn carousel__hot-tours_prew">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="carousel__btn carousel__hot-tours_next">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hot-tours__carousel-2 wow fadeInUp" data-wow-delay=".2s">
+            <div class="swiper carousel__hot-tours-2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <h3>Подарочная карта на путешествие Columbus Travel</h3>
+                    <p class="text_sm font_light">
+                      Пожалуй, самый желанный подарок для каждого человека
+                    </p>
+                    <button class="btn btn_primary">Узнать больше</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-2-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <h3>Подарочная карта на путешествие Columbus Travel</h3>
+                    <p class="text_sm font_light">
+                      Пожалуй, самый желанный подарок для каждого человека
+                    </p>
+                    <button class="btn btn_primary">Узнать больше</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-2-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <h3>Подарочная карта на путешествие Columbus Travel</h3>
+                    <p class="text_sm font_light">
+                      Пожалуй, самый желанный подарок для каждого человека
+                    </p>
+                    <button class="btn btn_primary">Узнать больше</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-2-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <h3>Подарочная карта на путешествие Columbus Travel</h3>
+                    <p class="text_sm font_light">
+                      Пожалуй, самый желанный подарок для каждого человека
+                    </p>
+                    <button class="btn btn_primary">Узнать больше</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/hot-tour-2-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination pagination_hot-tours-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="destinations">
+        <div class="container">
+          <h2 class="section__title">Сезонные направления</h2>
+          <div class="destinations__wrapper wow fadeInUp" data-wow-delay=".2s">
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-1.png"
+                alt="destination-img"
+              />
+              <h3>Египет</h3>
+            </a>
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-2.png"
+                alt="destination-img"
+              />
+              <h3>Таиланд</h3>
+            </a>
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-3.png"
+                alt="destination-img"
+              />
+              <h3>Мальдивы</h3>
+            </a>
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-4.png"
+                alt="destination-img"
+              />
+              <h3>ОАЭ</h3>
+            </a>
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-5.png"
+                alt="destination-img"
+              />
+              <h3>Турция</h3>
+            </a>
+            <a href="#" class="destinations__item">
+              <img
+                src="img/pictures/destination-img-6.png"
+                alt="destination-img"
+              />
+              <h3>Китай</h3>
+            </a>
+          </div>
+          <div class="call__wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="call__wrapper__head">
+              <div class="call__wrapper__head__name">
+                <img src="img/pictures/call-box-img.svg" alt="call-box-img" />
+                <h3>Хотите найти тур мечты?</h3>
+              </div>
+            </div>
+            <p>Перезвоним через 1 минуту</p>
+            <form class="call-form form">
+              <input type="tel" class="phone-format" placeholder="+998 (__) ___-__-__"  required/>
+              <button class="btn btn_yellow">Жду звонка</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="prices">
+        <div class="container">
+          <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Цены на туры по странам</h2>
+          <div class="prices__wrapper">
+            <div class="prices__item wow fadeInUp" data-wow-delay=".1s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+            <div class="prices__item wow fadeInUp" data-wow-delay=".2s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+            <div class="prices__item wow fadeInUp" data-wow-delay=".3s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+            <div class="prices__item wow fadeInUp" data-wow-delay=".4s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+            <div class="prices__item wow fadeInUp" data-wow-delay=".5s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+            <div class="prices__item wow fadeInUp" data-wow-delay=".6s">
+              <div class="prices__item__img">
+                <img src="img/logos/turkey.png" alt="country-flag" />
+              </div>
+              <div class="prices__item__info">
+                <h5>Турция</h5>
+                <p>От <span>2 750 000</span> Сум</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular">
+        <div class="container">
+          <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Популярные отели</h2>
+          <div class="popular__wrapper wow fadeInUp" data-wow-delay=".2s">
+            <div class="swiper carousel__popular">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <div class="carousel__item__info-top">
+                      <p class="location">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 9.75V9.75C7.75725 9.75 6.75 8.74275 6.75 7.5V7.5C6.75 6.25725 7.75725 5.25 9 5.25V5.25C10.2428 5.25 11.25 6.25725 11.25 7.5V7.5C11.25 8.74275 10.2428 9.75 9 9.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 15.75C9 15.75 3.75 11.4375 3.75 7.5C3.75 4.6005 6.1005 2.25 9 2.25C11.8995 2.25 14.25 4.6005 14.25 7.5C14.25 11.4375 9 15.75 9 15.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        Мальдивы / Северный Мале Атолл
+                      </p>
+                      <img
+                        class="info-logo"
+                        src="img/pictures/popular-carousel-info-logo-1.png"
+                        alt="logo"
+                      />
+                    </div>
+
+                    <h3>Huvafen fushi maldives</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="text_sm font_light">Спешите бронировать!</p>
+                    <button class="btn btn_primary">Выбрать тур</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/popular-carousel-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <div class="carousel__item__info-top">
+                      <p class="location">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 9.75V9.75C7.75725 9.75 6.75 8.74275 6.75 7.5V7.5C6.75 6.25725 7.75725 5.25 9 5.25V5.25C10.2428 5.25 11.25 6.25725 11.25 7.5V7.5C11.25 8.74275 10.2428 9.75 9 9.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 15.75C9 15.75 3.75 11.4375 3.75 7.5C3.75 4.6005 6.1005 2.25 9 2.25C11.8995 2.25 14.25 4.6005 14.25 7.5C14.25 11.4375 9 15.75 9 15.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        Мальдивы / Северный Мале Атолл
+                      </p>
+                      <img
+                        class="info-logo"
+                        src="img/pictures/popular-carousel-info-logo-1.png"
+                        alt="logo"
+                      />
+                    </div>
+
+                    <h3>Huvafen fushi maldives</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="text_sm font_light">Спешите бронировать!</p>
+                    <button class="btn btn_primary">Выбрать тур</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/popular-carousel-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <div class="carousel__item__info-top">
+                      <p class="location">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 9.75V9.75C7.75725 9.75 6.75 8.74275 6.75 7.5V7.5C6.75 6.25725 7.75725 5.25 9 5.25V5.25C10.2428 5.25 11.25 6.25725 11.25 7.5V7.5C11.25 8.74275 10.2428 9.75 9 9.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 15.75C9 15.75 3.75 11.4375 3.75 7.5C3.75 4.6005 6.1005 2.25 9 2.25C11.8995 2.25 14.25 4.6005 14.25 7.5C14.25 11.4375 9 15.75 9 15.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        Мальдивы / Северный Мале Атолл
+                      </p>
+                      <img
+                        class="info-logo"
+                        src="img/pictures/popular-carousel-info-logo-1.png"
+                        alt="logo"
+                      />
+                    </div>
+
+                    <h3>Huvafen fushi maldives</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="text_sm font_light">Спешите бронировать!</p>
+                    <button class="btn btn_primary">Выбрать тур</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/popular-carousel-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide carousel__item">
+                  <div class="carousel__item__info">
+                    <div class="carousel__item__info-top">
+                      <p class="location">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 9.75V9.75C7.75725 9.75 6.75 8.74275 6.75 7.5V7.5C6.75 6.25725 7.75725 5.25 9 5.25V5.25C10.2428 5.25 11.25 6.25725 11.25 7.5V7.5C11.25 8.74275 10.2428 9.75 9 9.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M9 15.75C9 15.75 3.75 11.4375 3.75 7.5C3.75 4.6005 6.1005 2.25 9 2.25C11.8995 2.25 14.25 4.6005 14.25 7.5C14.25 11.4375 9 15.75 9 15.75Z"
+                              stroke="#899EB9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        Мальдивы / Северный Мале Атолл
+                      </p>
+                      <img
+                        class="info-logo"
+                        src="img/pictures/popular-carousel-info-logo-1.png"
+                        alt="logo"
+                      />
+                    </div>
+
+                    <h3>Huvafen fushi maldives</h3>
+                    <div class="stars">
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                      <span><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <p class="text_sm font_light">Спешите бронировать!</p>
+                    <button class="btn btn_primary">Выбрать тур</button>
+                  </div>
+                  <div class="carousel__item__img">
+                    <img
+                      src="img/pictures/popular-carousel-img-1.png"
+                      alt="carousel-img"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination pagination_popular"></div>
+              <div class="carousel__btns">
+                <button class="carousel__btn carousel__popular_prew">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="carousel__btn carousel__popular_next">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="popular-countries gray-bg">
+        <div class="container">
+          <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Популярные страны</h2>
+          <div class="swiper carousel__popular-countries wow fadeInUp" data-wow-delay=".2s">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/popular-country-img-1.png"
+                    alt="hot-tour-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <h3 class="title">Турция</h3>
+                  <ul class="carousel__item__info-list">
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Аланья</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Кемер</a>
+                      <p>4 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Сиде</a>
+                      <p>3 000 000 <span>Сум</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/popular-country-img-2.png"
+                    alt="hot-tour-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <h3 class="title">Египет</h3>
+                  <ul class="carousel__item__info-list">
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Шарм-эль-Шейх</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Хургада</a>
+                      <p>4 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Набк Бей</a>
+                      <p>3 000 000 <span>Сум</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/popular-country-img-3.png"
+                    alt="hot-tour-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <h3 class="title">ОАЭ</h3>
+                  <ul class="carousel__item__info-list">
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Дубай</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Шарджа</a>
+                      <p>4 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Фуджейра</a>
+                      <p>3 000 000 <span>Сум</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/popular-country-img-4.png"
+                    alt="hot-tour-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <h3 class="title">Мальдивы</h3>
+                  <ul class="carousel__item__info-list">
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">атолл Каафу</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">атолл Мале</a>
+                      <p>4 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Южный атолл</a>
+                      <p>3 000 000 <span>Сум</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/hot-tour-img-1.png"
+                    alt="hot-tour-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <h3 class="title">Турция</h3>
+                  <ul class="carousel__item__info-list">
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Аланья</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Кемер</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                    <li class="carousel__item__info-list__item">
+                      <a href="#">Сиде</a>
+                      <p>2 750 000 <span>Сум</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination pagination_popular-countries"></div>
+            <div class="carousel__btns">
+              <button class="carousel__btn carousel__popular-countries_prew">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="carousel__btn carousel__popular-countries_next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="domestic">
+        <div class="container">
+          <h2 class="section__title">Внутренний туризм</h2>
+          <div class="swiper carousel__domestic">
+            <div class="swiper-wrapper">
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".1s">
+                <div class="carousel__item__bg">
+                  <img
+                    src="img/pictures/domestic-carousel-img-1.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <div class="carousel__item__info-top">
+                    <span class="type">Горячие</span>
+                    <span class="discount">-17%</span>
+                  </div>
+                  <div class="carousel__item__info-content">
+                    <h6 class="tour__name">Название тура</h6>
+                    <h4 class="tour__discount-price">
+                      От <span>2 750 000</span> Сум
+                    </h4>
+                    <span class="tour__price">3 400 000 Cум</span>
+                    <p class="tour__info">07 июля, за одного взрослого</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".2s">
+                <div class="carousel__item__bg">
+                  <img
+                    src="img/pictures/domestic-carousel-img-2.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <div class="carousel__item__info-top">
+                    <span class="type">Горячие</span>
+                    <span class="discount">-17%</span>
+                  </div>
+                  <div class="carousel__item__info-content">
+                    <h6 class="tour__name">Название тура</h6>
+                    <h4 class="tour__discount-price">
+                      От <span>2 750 000</span> Сум
+                    </h4>
+                    <span class="tour__price">3 400 000 Cум</span>
+                    <p class="tour__info">07 июля, за одного взрослого</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".3s">
+                <div class="carousel__item__bg">
+                  <img
+                    src="img/pictures/domestic-carousel-img-3.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <div class="carousel__item__info-top">
+                    <span class="type">Горячие</span>
+                    <span class="discount">-17%</span>
+                  </div>
+                  <div class="carousel__item__info-content">
+                    <h6 class="tour__name">Название тура</h6>
+                    <h4 class="tour__discount-price">
+                      От <span>2 750 000</span> Сум
+                    </h4>
+                    <span class="tour__price">3 400 000 Cум</span>
+                    <p class="tour__info">07 июля, за одного взрослого</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".4s">
+                <div class="carousel__item__bg">
+                  <img
+                    src="img/pictures/domestic-carousel-img-4.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <div class="carousel__item__info-top">
+                    <span class="type">Горячие</span>
+                    <span class="discount">-17%</span>
+                  </div>
+                  <div class="carousel__item__info-content">
+                    <h6 class="tour__name">Название тура</h6>
+                    <h4 class="tour__discount-price">
+                      От <span>2 750 000</span> Сум
+                    </h4>
+                    <span class="tour__price">3 400 000 Cум</span>
+                    <p class="tour__info">07 июля, за одного взрослого</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <div class="carousel__item__bg">
+                  <img
+                    src="img/pictures/domestic-carousel-img-1.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <div class="carousel__item__info-top">
+                    <span class="type">Горячие</span>
+                    <span class="discount">-17%</span>
+                  </div>
+                  <div class="carousel__item__info-content">
+                    <h6 class="tour__name">Название тура</h6>
+                    <h4 class="tour__discount-price">
+                      От <span>2 750 000</span> Сум
+                    </h4>
+                    <span class="tour__price">3 400 000 Cум</span>
+                    <p class="tour__info">07 июля, за одного взрослого</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="carousel__btns">
+              <button class="carousel__btn carousel__domestic_prew">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="carousel__btn carousel__domestic_next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="attention">
+        <div class="container">
+          <h2 class="section__title">Обратите внимание</h2>
+          <div class="attention__wrapper">
+            <div class="attention__item wow fadeInUp" data-wow-delay=".1s">
+              <div class="attention__item__info">
+                <div class="attention__item__info__head">
+                  <h3 class="attention__item__name">Columbus Travel</h3>
+                  <p>
+                    Выбирая тур с отметкой <span>Columbus Travel</span>,
+                    автоматически будут предложены отели класса люкс, встреча с
+                    цветами, индивидуальный трансфер.
+                  </p>
+                </div>
+                <button class="btn btn_white">Подробнее</button>
+              </div>
+              <div class="attention__item__img">
+                <img
+                  src="img/pictures/attention-img-1.svg"
+                  alt="attention-img"
+                />
+              </div>
+            </div>
+            <div class="attention__item wow fadeInUp" data-wow-delay=".2s">
+              <div class="attention__item__info">
+                <div class="attention__item__info__head">
+                  <h3 class="attention__item__name">Чат-бот MAX</h3>
+                  <p>Max: телеграм-бот и персональный помощник</p>
+                  <ul class="attention__item__info__features">
+                    <li>
+                      <img src="img/icons/star2.svg" alt="star" />
+                      Удобно для смартфона
+                    </li>
+                    <li>
+                      <img src="img/icons/star2.svg" alt="star" />
+                      Доступ 24/7
+                    </li>
+                    <li>
+                      <img src="img/icons/star2.svg" alt="star" />
+                      Оперативный ответ на запрос
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn btn_white">Подробнее</button>
+              </div>
+              <div class="attention__item__img">
+                <img
+                  class="img-desktop"
+                  src="img/pictures/attention-img-2.png"
+                  alt="attention-img"
+                />
+                <img
+                  class="img-mobile"
+                  src="img/pictures/attention-img-2-mobile.png"
+                  alt="attention-img"
+                />
+              </div>
+            </div>
+            <div class="attention__item wow fadeInUp" data-wow-delay=".1s">
+              <div class="attention__item__info">
+                <div class="attention__item__info__head">
+                  <h3 class="attention__item__name">Обучение</h3>
+                  <p>
+                    Регулярно проводятся образовательные мероприятия для
+                    турагентов в разнообразных форматах
+                  </p>
+                </div>
+                <button class="btn btn_white">Подробнее</button>
+              </div>
+              <div class="attention__item__img">
+                <img
+                  class="img-desktop"
+                  src="img/pictures/attention-img-3.png"
+                  alt="attention-img"
+                />
+                <img
+                  class="img-mobile"
+                  src="img/pictures/attention-img-3-mobile.png"
+                  alt="attention-img"
+                />
+              </div>
+            </div>
+            <div class="attention__item wow fadeInUp" data-wow-delay=".2s">
+              <div class="attention__item__info">
+                <div class="attention__item__info__head">
+                  <h3 class="attention__item__name">Коллаборация</h3>
+                  <p>
+                    Открыты к сотрудничеству и партнерству. Работая в сфере
+                    услуг, мы понимаем, как много зависит от хороших
+                    коллабораций
+                  </p>
+                </div>
+                <button class="btn btn_white">Подробнее</button>
+              </div>
+              <div class="attention__item__img">
+                <img
+                  src="img/pictures/attention-img-4.png"
+                  alt="attention-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials gray-bg">
+        <div class="container">
+          <h2 class="section__title">Говорят, с нами приятно иметь дело</h2>
+          <div class="testimonials__wrapper wow fadeInUp" data-wow-delay=".1s">
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Руслан</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.07.2024</p>
+              </div>
+              <p class="testimonials__item__body">
+                Отдыхали в конце июля 8 ночей в armas pemar beach 5 в Сиде.
+                Номера в отеле не новые, после косметического ремонта, но чистые
+                и уютные. Не первый раз в Турции отдыхаем, но такого количества
+                соотечеств...
+              </p>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Яна</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.05.2023</p>
+              </div>
+              <p class="testimonials__item__body">
+                Не первый раз бронируем тур/отель через сервис онлайнтурс! Все
+                четко, ясно, быстро! В процессе сбора путешествия решили
+                увеличить дни проживания в отеле, менеджер быстро решил эту
+                задачу, связался с ...
+              </p>
+            </div>
+            <div class="testimonials__item">
+              <div class="testimonials__item__head">
+                <div class="testimonials__item__head__top">
+                  <h4>Дмитрий</h4>
+                  <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div>
+                </div>
+                <p>отдых с 24.07.2024</p>
+              </div>
+              <p class="testimonials__item__body">
+                Отдыхали в конце июля 8 ночей в armas pemar beach 5 в Сиде.
+                Номера в отеле не новые, после косметического ремонта, но чистые
+                и уютные. Не первый раз в Турции отдыхаем, но такого количества
+                соотечеств...
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news gray-bg">
+        <div class="container">
+          <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Что нового</h2>
+          <div class="swiper carousel__news">
+            <div class="swiper-wrapper">
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".1s">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/news-card-img-1.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <p class="text_sm font_light">17.05.2024</p>
+
+                  <h4>Таиланд продлил безвизовый въезд для граждан России</h4>
+                  <p class="text_sm font_light">
+                    Теперь на территории государства можно находиться 60 дней
+                    без визы
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".2s">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/news-card-img-2.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <p class="text_sm font_light">17.05.2024</p>
+
+                  <h4>Таиланд продлил безвизовый въезд для граждан России</h4>
+                  <p class="text_sm font_light">
+                    Теперь на территории государства можно находиться 60 дней
+                    без визы
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".3s">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/news-card-img-3.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <p class="text_sm font_light">17.05.2024</p>
+
+                  <h4>Таиланд продлил безвизовый въезд для граждан России</h4>
+                  <p class="text_sm font_light">
+                    Теперь на территории государства можно находиться 60 дней
+                    без визы
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item wow fadeInUp" data-wow-delay=".4s">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/news-card-img-4.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <p class="text_sm font_light">17.05.2024</p>
+
+                  <h4>Таиланд продлил безвизовый въезд для граждан России</h4>
+                  <p class="text_sm font_light">
+                    Теперь на территории государства можно находиться 60 дней
+                    без визы
+                  </p>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide carousel__item">
+                <div class="carousel__item__img">
+                  <img
+                    src="img/pictures/news-card-img-2.png"
+                    alt="carousel-img"
+                  />
+                </div>
+                <div class="carousel__item__info">
+                  <p class="text_sm font_light">17.05.2024</p>
+
+                  <h4>Таиланд продлил безвизовый въезд для граждан России</h4>
+                  <p class="text_sm font_light">
+                    Теперь на территории государства можно находиться 60 дней
+                    без визы
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="carousel__btns">
+              <button class="carousel__btn carousel__news_prew">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="carousel__btn carousel__news_next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="more-ideas">
+        <div class="container">
+          <div class="more-ideas__wrapper">
+            <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">Больше идей для путешествий</h2>
+            <div class="more-ideas__socials">
+              <a href="#" class="more-ideas__socials-item wow fadeInUp" data-wow-delay=".2s">
+                <img src="img/icons/telegram.svg" alt="social-icon" />
+                <span> Подписаться на нас в Telegram</span>
+              </a>
+              <a href="#" class="more-ideas__socials-item wow fadeInUp" data-wow-delay=".3s">
+                <img src="img/icons/instagram.svg" alt="social-icon" />
+                <span>Подписаться на нас в Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact__wrapper wow fadeInUp" data-wow-delay=".1s">
+            <h2 class="section__title">Хотите найти тур мечты?</h2>
+            <p>Перезвоним через 1 минуту</p>
+            <form class="call-form contact__form">
+              <input type="text" class="phone-format" placeholder="+998 (__) ___-__-__" required/>
+              <button class="btn btn_yellow">Жду звонка</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer class="footer gray-bg">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__top">
+            <div class="footer__top__left">
+              <a class="footer__top__left-logo" href="index.html">
+                <img src="img/logos/logo.svg" alt="logo" />
+              </a>
+              <div class="phones">
+                <button>
+                  <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                  +99899 944 44 88
+                </button>
+                <button>
+                  <img src="img/icons/phone_blue.svg" alt="phone-icon" />
+                  +99899 933 33 88
+                </button>
+              </div>
+            </div>
+            <div class="footer__top__right">
+              <ul class="footer__top__right-list">
+                <li>
+                  <a href="about.html">О нас</a>
+                </li>
+                <li>
+                  <a href="faq.html">FAQ</a>
+                </li>
+                <li>
+                  <a href="education.html">Обучение</a>
+                </li>
+              </ul>
+              <ul class="footer__top__right-list">
+                <li>
+                  <a href="tours.html">Туры</a>
+                </li>
+                <li>
+                  <a href="tours.html">
+                    <img src="img/icons/fire.svg" alt="fire-icon" />
+                    Горячие туры
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/icons/persentage.svg" alt="persentage-icon" />
+                    Акции
+                  </a>
+                </li>
+              </ul>
+              <ul class="footer__top__right-list">
+                <li>
+                  <a href="service.html">Услуги</a>
+                </li>
+                <li>
+                  <a href="#">Блог</a>
+                </li>
+                <li>
+                  <a href="contacts.html">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <div class="footer__bottom-types">
+              <button>
+                <span class="icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="Group">
+                      <path
+                        id="Path"
+                        d="M10.1509 9.59138L8.02539 14.6056"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Path_2"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.9513 2.98572V2.98572C15.7814 4.18683 17.274 7.30764 16.4325 10.2647L16.3778 10.4579C16.2638 10.8595 15.9827 11.1927 15.6062 11.3728C15.2296 11.5529 14.7939 11.5626 14.4097 11.3994L5.88669 7.78102C5.50236 7.61795 5.2066 7.29764 5.07462 6.90156C4.94264 6.50548 4.98716 6.07179 5.19686 5.71078L5.29748 5.53651C6.84063 2.87803 10.1218 1.78451 12.9513 2.98572Z"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Path_3"
+                        d="M12.951 2.98572L13.1398 3.7492C13.7008 6.02046 13.2082 8.4236 11.7988 10.291V10.291"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Path_4"
+                        d="M12.9508 2.98572L12.2705 3.38022C10.247 4.55461 8.86051 6.57835 8.49609 8.88938V8.88938"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        id="Path_5"
+                        d="M2.5 16.6667C3.82838 15.3383 5.63006 14.592 7.50867 14.592C9.38729 14.592 11.189 15.3383 12.5173 16.6667"
+                        stroke="inherit"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </span>
+                Туры
+              </button>
+              <button>
+                <span class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.5859 15.836H5.41541C4.49419 15.836 3.74805 15.0898 3.74805 14.1686V4.99811C3.74805 3.6167 4.86768 2.49707 6.24909 2.49707H13.7522C15.1336 2.49707 16.2533 3.6167 16.2533 4.99811V14.1686C16.2533 15.0898 15.5071 15.836 14.5859 15.836Z"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.25 13.3348H7.08368"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.918 13.3348H13.7516"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M6.86237 15.8362V17.0867C6.86237 17.5469 6.48888 17.9204 6.02869 17.9204H5.19501C4.73482 17.9204 4.36133 17.5469 4.36133 17.0867V15.4561"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.6397 15.4561V17.0867C15.6397 17.5469 15.2662 17.9204 14.806 17.9204H13.9724C13.5122 17.9204 13.1387 17.5469 13.1387 17.0867V15.8362"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.2539 5.83203H17.5044C17.9646 5.83203 18.3381 6.20552 18.3381 6.66571V9.16675"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.74826 5.83203H2.49774C2.03755 5.83203 1.66406 6.20552 1.66406 6.66571V9.16675"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.2989 3.03487L13.8241 4.50965C13.5115 4.82228 13.0872 4.99819 12.6453 4.99819H7.35644C6.91459 4.99819 6.49025 4.82228 6.17762 4.50965L4.70117 3.0332"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.2533 10.8338H3.74805"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Экскурсии
+              </button>
+              <button>
+                <span class="icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <rect
+                      x="10.834"
+                      y="10.833"
+                      width="7.5"
+                      height="6.66667"
+                      rx="2"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.834 10.833V12.9163C15.834 13.1465 15.6474 13.333 15.4173 13.333H13.7507C13.5205 13.333 13.334 13.1465 13.334 12.9163V10.833"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2.92773 12.5003H4.99951C5.91998 12.5003 6.66618 11.7541 6.66618 10.8336V9.16692C6.66618 8.24645 7.41237 7.50026 8.33284 7.50026H9.99951C10.92 7.50026 11.6662 6.75407 11.6662 5.83359V2.6875"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.308 8.33354C16.4845 4.71583 13.1387 2.24453 9.43877 2.52108C5.73883 2.79763 2.79763 5.73884 2.52108 9.43878C2.24454 13.1387 4.71583 16.4845 8.33355 17.308"
+                      stroke="inherit"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                Странны мира
+              </button>
+            </div>
+
+            <ul class="social">
+              <li>
+                <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="container footer__copyright__wrapper">
+          <p>© Columbus 2024. Все права защищены.</p>
+          <p>created by NOVAS</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js" integrity="sha512-F5Ul1uuyFlGnIT1dk2c4kB4DBdi5wnBJjVhL7gQlGh46Xn0VhvD8kgxLtjdZ5YN83gybk/aASUAlpdoWUjRR3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/carousels.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="js/datepicker.js"></script>
+
+  </body>
+</html>
