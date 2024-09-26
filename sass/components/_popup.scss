@@ -11,7 +11,12 @@
     background-color: rgba(12, 117, 254, 0.3);
   }
 
-  &.successful {
+  &.error {
+    // display: flex;
+  }
+
+  &.successful,
+  &.error {
     .popup {
       &__bottom {
         @include center;

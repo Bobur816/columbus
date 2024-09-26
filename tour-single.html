@@ -18,9 +18,35 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+      ym(78730929, "init", {
+      clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true});
+      ym(95058571, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true});
+    </script>
   </head>
   <body>
 
+    <!-- Yandex.Metrika counter (noscript) -->
+	<noscript>
+		<div>
+		<img src="https://mc.yandex.ru/watch/78730929" style="position:absolute; left:-9999px;" alt="" />
+		<img src="https://mc.yandex.ru/watch/95058571" style="position:absolute; left:-9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- Yandex.Metrika counter (noscript) -->
     
 
     <div class="popup popup-call-form">
@@ -78,6 +104,44 @@
             <div class="popup__bottom">
               <div class="popup-icon">
                 <i class="fa-solid fa-check"></i>
+              </div>
+              <p>
+                Ваш запрос получен. мы свяжемся с вами в ближайшее время
+              </p>
+            </div>
+          </div>
+          <button class="popup__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21"
+                stroke="#1A3E44"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- popup-error  -->
+    <div class="popup error">
+      <div class="overlay">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__top">
+              <h3>Заявка</h3>
+            </div>
+            <div class="popup__bottom">
+              <div class="popup-icon">
+                <i class="fa-solid fa-xmark"></i>
               </div>
               <p>
                 Ваш запрос получен. мы свяжемся с вами в ближайшее время
@@ -1082,8 +1146,9 @@
           <h2 class="section__title wow fadeInUp" data-wow-delay=".1s">
             Отель на карте
           </h2>
-          <div class="tour-map__wrapper wow fadeInUp" data-wow-delay=".2s">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1334.9661023545534!2d69.28282927089569!3d41.31109229054715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2bec875291%3A0x22b5bc120c7e164!2sHotel%20Uzbekistan!5e0!3m2!1suz!2s!4v1723858422400!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="tour-map__wrapper">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1334.9661023545534!2d69.28282927089569!3d41.31109229054715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2bec875291%3A0x22b5bc120c7e164!2sHotel%20Uzbekistan!5e0!3m2!1suz!2s!4v1723858422400!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <div id="map"></div>
           </div>
 
         </div>
@@ -1590,12 +1655,12 @@
     <script src="js/wow.min.js"></script>
     <script src="js/carousels.js"></script>
 
-    <script src="js/main.js"></script>
-
+    
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/datepicker.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -2287,21 +2287,21 @@ input[type=radio]:checked::before {
   object-fit: cover;
   background-color: rgba(12, 117, 254, 0.3);
 }
-.popup.successful .popup__bottom {
+.popup.successful .popup__bottom, .popup.error .popup__bottom {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 6rem;
 }
-.popup.successful .popup__bottom p {
+.popup.successful .popup__bottom p, .popup.error .popup__bottom p {
   text-align: center;
   font-family: Montserrat;
   font-size: 0.8rem;
   line-height: 0.9rem; /* 128.571% */
   width: 80%;
 }
-.popup.successful .popup-icon {
+.popup.successful .popup-icon, .popup.error .popup-icon {
   background-color: #f6f6f6;
   width: 12.7rem;
   height: 9.4rem;
@@ -2310,7 +2310,7 @@ input[type=radio]:checked::before {
   align-items: center;
   border-radius: 5.75rem;
 }
-.popup.successful .popup-icon i {
+.popup.successful .popup-icon i, .popup.error .popup-icon i {
   font-size: 5rem;
   color: var(--color-primary);
 }

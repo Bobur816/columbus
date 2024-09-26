@@ -228,6 +228,60 @@ $(window).on("load", () => {
     mask: "+998 (99) 999-99-99",
   });
 
+  //__________MAP_____________
+
+  ymaps.ready(mapStart);
+  function mapStart() {
+    var footerMap = new ymaps.Map(
+      "map",
+      {
+        center: [41.301665332732045, 69.28042981719217],
+        zoom: 12,
+      },
+      {
+        searchControlProvider: "yandex#search",
+      }
+    );
+
+    footerMap.geoObjects.add(
+      new ymaps.Placemark(
+        [41.291665332732045, 69.28042981719217],
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "img/icons/marker.svg",
+          iconImageSize: [34, 41],
+        }
+      )
+    );
+
+    footerMap.geoObjects.add(
+      new ymaps.Placemark(
+        [41.35195749325768, 69.25763853939597],
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "img/icons/marker.svg",
+          iconImageSize: [34, 41],
+        }
+      )
+    );
+
+    footerMap.geoObjects.add(
+      new ymaps.Placemark(
+        [41.32482145447368, 69.41424428835043],
+        {},
+        {
+          iconLayout: "default#image",
+          iconImageHref: "img/icons/marker.svg",
+          iconImageSize: [34, 41],
+        }
+      )
+    );
+
+    footerMap.behaviors.disable("scrollZoom");
+  }
+
   new WOW({
     offset: 50,
     mobile: false,
