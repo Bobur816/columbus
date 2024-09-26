@@ -33,6 +33,43 @@ $(window).on("load", () => {
     const parent = e.target.closest(".dropdown__content");
     $(parent).slideUp(400);
   });
+
+  // ______________________________popup_________________________________
+  $(".call-form__open").on("click", function () {
+    $(".popup-call-form").fadeIn(300);
+  });
+
+  $(".popup__close").on("click", function () {
+    $(".popup").fadeOut(300);
+  });
+
+  $(".popup__form").on("submit", function (e) {
+    e.preventDefault();
+    $(".popup-call-form").fadeOut(300);
+    $(".successful").fadeIn(300);
+    setTimeout(() => {
+      $(".popup__form input").val("");
+    }, 700);
+  });
+  $(".feedback__form").on("submit", function (e) {
+    e.preventDefault();
+
+    $(".successful").fadeIn(300);
+    setTimeout(() => {
+      $(".feedback__form input").val("");
+    }, 700);
+  });
+
+  $(".popup").click((e) => {
+    let div = $(".popup__wrapper");
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      $(".popup").fadeOut(400);
+
+      setTimeout(() => {
+        $(".popup__form input").val("");
+      }, 700);
+    }
+  });
   // ______________________________selection_________________________________
 
   $(".selection__open").on("click", function () {
@@ -136,7 +173,7 @@ $(window).on("load", () => {
   $(".call-form").on("submit", function (e) {
     e.preventDefault();
     e.target.reset();
-    $(".successful-window").fadeIn(400);
+    $(".successful").fadeIn(400);
   });
 
   // ___________________faq_____________________
@@ -178,7 +215,7 @@ $(window).on("load", () => {
       gotoStep(nextEl, nextStep);
     } else {
       $(".selection-tour").fadeOut(300);
-      $(".successful-window").fadeIn(400);
+      $(".successful").fadeIn(400);
       setTimeout(() => {
         gotoStep(firstEl, firstStep);
         $(".inputs input").val("");

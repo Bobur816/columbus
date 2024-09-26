@@ -21,18 +21,86 @@
   </head>
   <body>
 
-    <!-- successful   -->
-    <div class="successful-window">
-      <div class="successful__wrapper">
-        <button class="close__btn successful__close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <path d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21" stroke="#0C73FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="successful__content">
-          <h3>Заявка</h3>
-          <img src="img/icons/successfull.svg" alt="successful">
-          <p>Ваш запрос получен. мы свяжемся с вами в ближайшее время</p>
+    
+
+    <div class="popup popup-call-form">
+      <div class="overlay">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__top">
+              <h3>Заявка</h3>
+              <p>
+                Оставьте свои контактные данные, и наш менеджер расскажет больше интересных деталей
+              </p>
+            </div>
+            <form class="popup__form">
+              <input type="text" placeholder="Имя" required />
+              <input
+                type="text"
+                class="phone-format"
+                placeholder="Номер телефона"
+                required
+              />
+              <button class="popup-call-form__btn btn_green">Отправить</button>
+              <p>Даю согласие на обработку моих персональных данных</p>
+            </form>
+          </div>
+
+          <button class="popup__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21"
+                stroke="#1A3E44"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup-successful  -->
+    <div class="popup successful">
+      <div class="overlay">
+        <div class="popup__wrapper">
+          <div class="popup__content">
+            <div class="popup__top">
+              <h3>Заявка</h3>
+            </div>
+            <div class="popup__bottom">
+              <div class="popup-icon">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p>
+                Ваш запрос получен. мы свяжемся с вами в ближайшее время
+              </p>
+            </div>
+          </div>
+          <button class="popup__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M20.9999 20.9999L11 11M11 11L1 1M11 11L21 1M11 11L1 21"
+                stroke="#1A3E44"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -961,7 +1029,7 @@
                 </li>
               </ul>
 
-              <p class="mini-info">В стоимость тура входит: отель, авиабилет, трансфер, страховка</p>
+              <!-- <p class="mini-info">В стоимость тура входит: отель, авиабилет, трансфер, страховка</p>
               <div class="features">
 
                 <button class="btn btn_secondary-2">
@@ -1001,9 +1069,9 @@
                   <img src="img/icons/checkmark-blue.svg" alt="icon">
                   Питание
                 </li>
-              </ul>
+              </ul> -->
 
-              <button class="btn btn_primary">Заказать билет</button>
+              <button class="btn btn_primary call-form__open">Заказать билет</button>
             </div>
           </div>
         </div>
